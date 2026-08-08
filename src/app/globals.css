@@ -7,7 +7,10 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
+  /* Site uses PingFang SC / Source Han Sans CN; Noto Sans SC is the web-loaded
+     fallback. Apple devices keep the real PingFang SC via the stack. */
+  --font-sans: "PingFang SC", "Source Han Sans CN", "Noto Sans SC", "黑体",
+    "宋体", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
   --font-heading: var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -39,6 +42,22 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+
+  /* ---- Target site palette (exact values from source CSS) ---- */
+  --color-brand: #f39800; /* primary orange accent */
+  --color-brand-ink: #1a689a; /* deep blue (form submit hover) */
+  --color-navy: #001425; /* application-fields section bg */
+  --color-slate: #263d4f; /* card boxes, product hover */
+  --color-ink: #333; /* headings, nav */
+  --color-ink-2: #555; /* nav default */
+  --color-body: #666; /* body copy */
+  --color-caption: #999; /* dates, captions */
+  --color-footer-bg: #2f2f2f; /* footer */
+  --color-footer-border: #3b3b3b;
+  --color-alt: #f9f9f9; /* product section bg */
+  --color-line: #cccccc; /* hairline borders */
+  --color-shadow: #dedede; /* card shadows */
+
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -72,7 +91,7 @@
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
+  --radius: 0;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -121,10 +140,142 @@
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
   html {
     @apply font-sans;
+    /* The source scales rem with viewport (100/90/80/70px). We keep the root at
+       the browser default so Tailwind utilities stay correct, and translate the
+       site's rem values into px / clamp() in components instead. */
+    scroll-behavior: smooth;
   }
+  body {
+    @apply bg-background text-foreground;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+  }
+  p {
+    text-align: justify;
+    text-justify: inter-ideograph;
+  }
+}
+
+/* ---- Section container widths (from source: .inner 1400px, .content 83.33%) ---- */
+.container-inner {
+  width: 1400px;
+  max-width: 100%;
+  margin-inline: auto;
+}
+.container-content {
+  width: 83.333%;
+  margin-inline: auto;
+}
+@media screen and (max-width: 1355px) {
+  .container-content {
+    width: 88%;
+  }
+}
+@media screen and (max-width: 996px) {
+  .container-content {
+    width: 94%;
+  }
+}
+
+/* ---- Scroll-down arrow bounce (source: @keyframes bounce-down1) ---- */
+@keyframes bounce-down {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  25% {
+    transform: translate(-50%, -3px);
+  }
+  50%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  75% {
+    transform: translate(-50%, 3px);
+  }
+}
+.animate-bounce-down {
+  animation: bounce-down 1s linear infinite;
+}
+
+/* ---- News vertical marquee (source: SuperSlide topMarquee, continuous) ---- */
+@keyframes marquee-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee-up 20s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ---- Swiper: faithful pagination bullets & scrollbar styling ---- */
+.swiper {
+  --swiper-pagination-color: #fff;
+  --swiper-scrollbar-size: 2px;
+}
+
+/* Hero banner: vertical bullet stack on the right (source right:35px) */
+.hero-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  background: #fff;
+  opacity: 0.5;
+  border-radius: 9999px;
+  transition: all 0.5s;
+}
+.hero-pagination .swiper-pagination-bullet-active {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+}
+
+/* Application fields: draggable scrollbar (source: 32% wide, bottom 40px) */
+.appfields-swiper .swiper-scrollbar {
+  bottom: 40px;
+  left: 50% !important;
+  transform: translateX(-50%);
+  width: 32% !important;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+.appfields-swiper .swiper-scrollbar-drag {
+  background: #fff;
+  height: 4px;
+  top: auto;
+  bottom: -1px;
+  border-radius: 5px;
+}
+
+/* Hide scrollbar utility (for horizontal rails when desired) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ---- Lenis smooth scroll (desktop inertia, replaces Luxy.js) ---- */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
 }

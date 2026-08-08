@@ -1,0 +1,952 @@
+﻿@media only screen and (max-width:1600px){
+	/*首页解决方案*/
+	.hmSol .box {padding:0 60px;}
+	.hmSol .owl-nav button {margin-top:-30px;}
+	.hmSol .owl-nav .owl-prev {left:-60px;}
+	.hmSol .owl-nav .owl-next {right:-60px;}
+	.hmSol .owl-nav span {width:31px; height:60px;}
+}
+@media only screen and (max-width:1440px){
+	/*全局样式*/
+	.inner {width:93.75%;}
+	/*全站底部*/
+	.footer .top {padding:5% 0;}
+	/*内页Banner*/
+	.banner {padding-bottom:30.25%;}
+	/*新闻中心_首页*/
+	.bannerTop {padding:17.36% 0 12.5%;}
+	/*人才发展_频道页*/
+	.development .bannerTop {padding:14.9% 0 26.3%;}
+	/*人才发展_明阳大学 && 投资者关系_社会责任*/
+	.mingyang {padding:5.2% 0;}
+	.myItem {padding:8.33% 0;}
+	/*投资者关系_社会责任*/
+	/*投资者关系_股市信息*/
+	.dividend, .stock {padding:5.555% 0;}
+	/*投资者关系_首页*/
+	.investor .bannerTop {padding:14.9% 0 26.3%;}
+	.stockInfo {padding:10.76% 0;}
+	.socialZr {padding:9.375% 0 12.5%;}
+	.contact {padding:9.7% 0;}
+	/*产品与技术_技术前沿 && 产品与技术_大数据中心*/
+	.mingyang {padding:5.2% 0;}
+	/*产品与技术_系列产品*/
+	.proMid {padding:15.27% 0;}
+
+	.proFile a {padding:5.555% 0;}
+	/*首页轮播图*/
+	.hmSlide .item {padding-bottom:63.7%;}
+	.hmSlide .owl-dots {bottom:5.5%;}
+	/*首页解决方案*/
+	.hmSol {padding:5.555% 0;}
+	/*首页新闻中心*/
+	.hmNews {padding:5.555% 0 2.777%;}
+	/*产品与技术_频道页*/
+	.proCenter .bannerTop {padding:14.9% 0 26.3%;}
+
+	.proTitle h2 {font-size:32px;}
+	.proBox .tab {padding:5.714% 0;}
+
+	.frontier {padding:9.7% 0;}
+
+	.dataCenter {padding-bottom:55.555%;}
+
+	.proMeta {padding:6.94% 0 10.41%;}
+	/*产品系列_光伏产品*/
+	.proNum {padding:20.83% 0 4.16%;}
+}
+@media only screen and (max-width:1280px){
+	/*全局样式*/
+	.wrapper {padding:40px 0;}
+	.blank {height:75px;}
+	/*全站底部*/
+	.footer .top {padding:40px 0;}
+	.widget {padding-right:40px;}
+	.widget h3 {font-size:16px; margin-bottom:10px;}
+	.widget li {font-size:14px;}
+
+	.backTop {width:50px; height:50px;}
+	/*logo*/
+	.logo {padding:17.5px 0;}
+	.logo a {width:178px; height:40px;}
+	/*顶部导航*/
+	.nav li {line-height: 75px; font-size:16px; padding:0 15px;}
+	.navDrop {top:76px;}
+	/*other*/
+	.other {padding-left:20px;}
+	.other .btn span {line-height: 75px; background-size:20px; width:70px;}
+	.other .language dl {width:100px; left:50%; margin-left:-51px;}
+	
+	/*内页二级菜单*/
+	.bar {height:60px;}
+	.subMenu li, .breadcrumb {line-height: 60px;}
+	/*新闻中心_集团新闻 && 新闻中心_行业动态*/
+	.newsList ul, .newsList.mr ul {width:104%;}
+	.newsList li, .newsList.mr li {width:30%; padding-right:3%; padding-bottom:3%;}
+	/*新闻中心_媒体聚焦*/
+	.focusList {margin-bottom:15px;}
+	.focusItem .text {margin-right:0;}
+	/*新闻中心_资料下载*/
+	.download h2 {font-size:32px;}
+	.download ul {width:106%;}
+	.download li {width:19%; padding-right:6%;}
+	/*新闻中心_首页*/
+	.newsTitle {font-size:32px; margin-bottom:35px;}
+	.groupNews {padding:40px 0;}
+	.industry, .mediaNews, .access {padding-top:40px;}
+	.industry li .thumbnail {width:200px;}
+	.industry li .info {margin-left:220px;}
+	.industry li h2 {line-height: 1.35em; max-height:2.7em;}
+	.industry li time {left:220px; bottom:10px;}
+
+	.mediaNews li .text {margin-left:80px;}
+
+	.access .title {margin-bottom:35px;}
+	.access .box {margin-bottom:40px;}
+	/*人才发展_人才理念*/
+	.idea .entry {padding:0;}
+	.idea .title {margin-bottom:35px;}
+	.idea .list ul {width:102%;}
+	.idea .list li {width:23%; padding-right:2%;}
+	.idea .list li .info {padding:35px 15px;}
+	/*人才发展_频道页*/
+	.development .bannerTop {padding:10% 0;}
+	.development .bannerTop .more {margin-top:25px;}
+
+	.devTitle {font-size:32px;}
+	.concept {padding:35px 0;}
+	.concept .intro {margin-bottom:20px;}
+	.concept .list ul {padding:30px 3%;}
+
+	.recruit .top {padding:14% 0;}
+	.recruit .btm a {padding:20px 5px;}
+	/*人才发展_明阳大学 && 投资者关系_社会责任*/
+	.myItem .inner {height:357px;}
+	.myItem .pic {width:500px;}
+	.myItem i {width:80px; height:80px; margin-top:-40px; right:-40px;}
+	.myItem .info {height:357px; margin-left:560px;}
+	.myItem .intro {max-height:320px;}
+
+	.myItem:nth-child(2n) i {left:-40px;}
+	.myItem:nth-child(2n) .info {margin-right:560px;}
+	/*投资者关系_社会责任*/
+	.rsItem .inner {height:256px;}
+	.rsItem .info {height:256px; margin-left:560px;}
+	.rsItem .intro {max-height: 208px;}
+	/*投资者关系_公告*/
+	.noticeList {margin-bottom:15px;}
+	/*内页类别菜单*/
+	.subCate {margin-bottom:35px;}
+	/*投资者关系_财务报告*/
+	.finance ul {margin-bottom:40px;}
+	/*投资者关系_首页*/
+	.investor .bannerTop {padding:10% 0;}
+	.investor .bannerTop .more {margin-top:25px;}
+
+	.investor .title {font-size:32px; margin-bottom:35px;}
+	.notice, .stockInfo, .team {padding:40px 0;}
+	.statements {padding:40px 0;}
+
+	.team li {padding:0 1% 3%; width:23%;}
+	.team li .photo {width:55%;}
+	.team li .info {margin-left:56%;}
+	.team li .info p {font-size:14px;}
+	.team li.first .info {padding:10px;}
+	.team li.first h3 {font-size:20px; margin-bottom:0;}
+	.team li.first p {height:auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+
+	.contact {padding:60px 0;}
+	.contact li {font-size:18px;}
+	.contact li i {width:67px; height:50px; margin-bottom:15px;}
+	/*产品与技术_系列产品*/
+	.proTop .title h2 {font-size:42px;}
+	.proTop .title p {font-size:20px;}
+	.proTop .info {width:40%;}
+	.proTop .pic {width:60%;}
+
+	.proMid .info {width:60%;}
+	.proMid .btm h3 {font-size:32px;}
+
+	.proBtm {padding:40px 0;}
+	.proBtm .title h3 {font-size:32px;}
+	.proBtm .box {padding:0;}
+	/*首页标题*/
+	.hmTitle p {padding:0 60px;}
+	/*首页系列产品*/
+	.hmPro li h2, .hmTitle h2 {font-size:32px;}
+	/*首页解决方案*/	
+	.hmSol li a {padding:10% 30px;}
+	.hmSol li .info {padding-left:120px;}
+	.hmSol li .info:before {left:100px;}
+	.hmSol li h3 {font-size:20px;}
+	.hmSol li p {font-size:16px;}
+	/*首页新闻中心*/
+	.hmNews li {padding-bottom:2%;}
+	.hmNews li .thumbnail {width:200px;}
+	.hmNews li .info {margin-left:220px;}
+	.hmNews li h3 {line-height: 1.5em; max-height:3em;}
+	.hmNews li .text {height:3.5em;}
+	.hmNews li time {left:220px;}
+	/*产品与技术_频道页*/
+	.proCenter .bannerTop {padding:10% 0;}
+	.proCenter .bannerTop .more {margin-top:25px;}
+
+	.proTitle h2 {font-size:32px; margin-bottom:25px;}
+
+	.proBox .tab li a {padding:10px 0;}
+	.proBox .tab li h3 {font-size:24px;}
+
+	.frontier {padding:7% 0;}
+	.frontier .info {width:auto;}
+
+	.dataCenter .proTitle {padding-top:7%;}
+	.dataCenter .proTitle h2 {margin-bottom:15px;}
+	.dataCenter .more {font-size:18px;}
+}
+@media only screen and (max-width:1024px){
+	/*全局样式*/
+	.blank {height:70px;}
+	/*全站底部*/
+	.footer .top .left {float:none; margin-bottom:20px;}
+	.widget {width:16.666%; padding:0; text-align:center;}
+
+	.footer .top .right {float:none;}
+	.realTime {text-align:center; margin-bottom:20px;}
+	.realTime h3, .hotLine h3 {margin-bottom:10px;}
+	.hotLine {text-align:center;}
+	/*全站头部*/
+	/*logo*/
+	.logo, .header.fixed .logo {padding:15px 0;}
+	/*顶部导航*/
+	.nav {position:fixed; right:-200px; top:71px; height:100%; width:200px; background-color:#fff; z-index: 8; overflow-y:auto; transition:right .3s; border-left:1px solid #f3f3f3;}
+	.nav.open {right:0;}
+	.nav ul {padding-bottom:71px;}
+	.nav li {float:none; padding:0; position:relative;}
+	.nav li a {line-height: 26px; padding:10px 1.5em; white-space: nowrap; overflow:hidden; text-overflow:ellipsis;}
+	.nav li a:hover:after, .nav li.cur > a:after, .nav li.on > a:after {display:none;}
+	.nav li.cur > a {background-color:#eee;}	
+	.nav li em.on{transform: rotate(90deg);}
+	.nav li em {transform: rotate(0deg);transition:all .3s;position:absolute; right: 10px; top:10px; display:block;  cursor:pointer;font-style: normal;}
+  .nav li em:after{content: '>';font-family: simsun;font-size: 20px;line-height: 30px;width: 30px;text-align: center;display: block;}
+  
+	.navDrop {position:static; display:none; left:auto; top:auto;}
+	.navDrop.open, .navDrop.show.open {display:block;}
+	.navDrop .inner {width:auto;}
+	.navDrop ul {padding:0;}
+	.navDrop li {display:block;}
+	.navDrop li a {text-align:left; padding:10px 1.5em 10px 2.5em;}
+	.navDrop .preview, .threeNav, .navDrop.show {display:none;}
+	.navDrop .info {width:auto; float:none; padding:0;}
+
+	.subNav {float:none; width:auto;}
+	.subNav dd {border:none; line-height: normal;}
+	.subNav dd a {padding:10px 1.5em 10px 2.5em;}
+	.subNav dd a:after {display:none;}
+	/*navBtn*/
+	.navBtn {cursor:pointer; display:block; position:relative; cursor:pointer; width:70px; height:70px; float:left; border-left:1px solid #f3f3f3;}
+	.navBtn span {display:block; width:20px; height:2px; background-color:#c2c2c2; position:absolute; top:50%; left:50%; margin-top:-1px; margin-left:-10px; line-height: normal;}
+	.navBtn span:before, .navBtn span:after {content:''; display:block; width:100%; height:2px; background-color:#c2c2c2; position:absolute; left:0; top:-7px; transition:transform .3s; transition:transform .3s;}
+	.navBtn span:after {top:auto; bottom:-7.5px;}
+	.navBtn.open span {height:0;}
+	.navBtn.open span:before {transform:rotate(45deg); top:0;}
+	.navBtn.open span:after {transform:rotate(-45deg); bottom:auto; top:0;}
+	
+	.home .navBtn span, .home .navBtn span:before, .home .navBtn span:after {background-color:#000;}
+	.home .fixed .navBtn span, .home .fixed .navBtn span:before, .home .fixed .navBtn span:after {background-color:#ccc;}
+	.home .nav li a {color:#333;}
+	/*other*/
+	.other {padding-left:0;}
+	.other .btn span {line-height: 70px;}
+	/*新闻中心_首页*/
+	.access .left {float:none; width:auto; padding:0; margin-bottom:20px;}
+	.access .right {float:none; width:auto; padding:0; }
+	.access .left dl, .access .right dl {float:none;}
+	.access dd {width:auto;}
+}
+@media only screen and (max-width:960px){
+	/*全局样式*/
+	.wrapper {padding:30px 0;}
+	/*全站底部*/
+	.footer .top {padding:30px 0;}
+
+	.footer .top .left {margin-bottom:10px;}
+	.widget {width:auto; float:none; clear:both; overflow: hidden; padding:5px 0;}
+	.widget h3 {margin-bottom:0; float:left; font-size:14px; line-height: 20px; padding:2px 0;}
+	.widget ul {margin-left:70px; overflow: hidden;}
+	.widget li {float:left; line-height: 20px; padding:2px 0 2px 15px; font-size:14px;}
+
+	.realTime {text-align:left; margin-bottom:10px;}
+	.realTime h3, .hotLine h3 {font-size:14px;}
+	.realTime .price .t {font-size:40px;}
+	.realTime .code {font-size:14px;}
+	.hotLine {text-align:left;}
+	.hotLine h3 i {padding:2px 0 2px 25px;}
+	.hotLine p {font-size:18px;}
+
+	.copyright {padding:10px 0;}
+	.copyright .left, .copyright .right {float:none; text-align:center; padding:5px 0;}
+	/*内页二级菜单*/
+	.bar {height:30px; padding:8px 0;}
+	.subMenu {position:relative;}
+	.subMenu span {background-color:#fff; border:1px solid #0079b1; color:#0079b1; border-radius:3px; display:block; width:120px; text-align:center; height:28px; line-height: 28px; cursor:pointer; position:relative; padding-right:25px; white-space: nowrap; overflow:hidden; text-overflow: ellipsis;}
+	.subMenu span:after {content:''; display:block; width:6px; height:6px; border-right:1px solid #0079b1; border-bottom:1px solid #0079b1; transform:rotate(45deg); position:absolute; right:10px; top:50%; margin-top:-5px;}
+	.subMenu ul {display:none; position:absolute; left:0; top:100%; width:145px; background-color:#fff; border:1px solid #0079b1; z-index: 7; padding:5px 0; border-radius:3px; display:none;}
+	.subMenu ul.open {display:block;}
+	.subMenu li {float:none; text-align:center; line-height: 1.75em; font-weight:normal; color:#333; font-size:14px;}
+	.subMenu li.cur {display:none;}
+	.subMenu li a {padding:5px;}
+	.subMenu li a:hover {color:#333;}
+
+	.breadcrumb {float:none; margin-left:155px; line-height: 30px; text-align:right; font-size:12px;}
+	/*内页分页*/
+	.pagenavi a {font-size:14px; padding:0 10px 5px;}
+	/*新闻中心_集团新闻 && 新闻中心_行业动态*/
+	.newsList li time {margin-bottom:5px;}
+	.newsList li h2 {font-size:16px; margin-bottom:5px;}
+	.newsList li .intro {font-size:14px; margin-bottom:10px;}
+	.newsList li .more {padding-bottom:10px;}
+	.newsList li .more a {font-size:12px;}
+	.newsList li .thumbnail i {width:45px; height:45px;}
+	/*新闻中心_行业动态*/
+	.newsList li .date {margin-bottom:10px;}
+	.newsList li .date time {height:30px; line-height: 30px; margin-top:-25px; width:90px;}
+	/*新闻中心_媒体聚焦*/
+	.focusList {margin-bottom:10px;}
+	.focusItem {margin-bottom:25px;}
+
+	.focusItem .info {margin-left:230px;}
+	.focusItem .text {margin-left:75px;}
+	.focusItem .intro {margin-bottom:5px;}
+	/*新闻中心_资料下载*/
+	.download {margin-bottom:30px;}
+	.download h2 {font-size:28px;}
+	.download ul {width:102%;}
+	.download li {width:23%; padding-right:2%; padding-bottom:2.5%;}
+	.download li .pic {margin-bottom:30px;}
+	/*人才发展_频道页 && 新闻中心_首页*/
+	.bannerTop {padding:100px 0;}
+	.bannerTop #newsTop {padding-bottom:20px;}
+	.bannerTop .box {width:70%;}
+	.bannerTop h2 {font-size:20px; margin-bottom:20px;}
+	.bannerTop .more {font-size:16px;}
+	.bannerTop .btn {margin-top:30px;}
+	.bannerTop .btn span {width:35px; height:35px; background-size:auto 22px;}
+
+	.newsTitle {font-size:28px; margin-bottom:25px;}
+	.readMore {font-size:18px; padding-top:20px;}
+
+	.groupNews {padding:30px 0;}
+	.groupNews ul {width:103%;}
+	.groupNews li {width:31%; padding-right:2%; padding-bottom:2%;}
+	.groupNews li .info {padding:15px;}
+	.groupNews li h2 {font-size:16px;}
+	.groupNews li .intro {font-size:14px;}
+
+	.industry, .mediaNews, .access {padding-top:30px;}
+	.industry .list {margin-bottom:25px;}
+	.industry .list:before {display:none;}
+	.industry ul {width:auto; margin-bottom:0;}
+	.industry li {float:none; width:auto; padding-right:0;}
+	.industry li:last-child {border-bottom:none; margin-bottom:0; padding-bottom:0;}
+
+	.mediaNews li a {padding:25px;}
+	.mediaNews li .text {margin-left:70px;}
+
+	.access .title {background-size:auto 50px; padding-top:60px; margin-bottom:20px;}
+	.access .title h2 {margin-bottom:10px;}
+	.access .box {margin-bottom:30px;}
+	.access dd {padding:10px; font-size:18px;}
+	.access .readMore {font-size:18px;}
+
+	/*人才发展_人才理念*/
+	.idea .icon {width:60px; height:60px; margin-top:-30px;}
+	.idea .title {margin-bottom:25px; font-size:20px;}
+	.idea .entry p {margin-bottom:60px;}
+	.idea .entry p:after {height:34px; bottom:-47px;}
+
+	.idea .list ul {width:102%;}
+	.idea .list li {width:48%;}
+	.idea .list li i {margin-bottom:10px;}
+	.idea .list li h3 {font-size:20px; margin-bottom:10px;}
+	.idea .list li p {font-size:14px;}
+	/*人才发展_频道页*/
+	.development .bannerTop .box {width:54%;}
+	.development .bannerTop .more {margin-top:20px;}
+
+	.devTitle {font-size:28px; margin-bottom:20px;}
+	.concept {padding:25px 0;}
+	.concept .intro {margin-bottom:15px; padding:0 3%;}
+	.concept .list li a {padding:80px 10px;}
+	.concept .list a:hover {padding:57px 10px;}
+	.concept .list li span {font-size:20px;}
+	.concept .list li i {margin-bottom:5px;}
+	.concept .list a:hover i {width:78px; height:78px;}
+
+	.recruit .top {padding:10% 0;}
+	.recruit .intro {padding:0 3%;}
+	.recruit .btm a {padding:15px 5px; font-size:18px; }
+	.recruit .btm a i {padding-right:25px;}
+	/*人才发展_明阳大学 && 投资者关系_社会责任*/
+	.mingyang {padding:35px 0;}
+	.mingyang h2 {font-size:26px; margin-bottom:20px;}
+	.mingyang .intro {padding:0;}
+	.mingyang .intro p {margin-bottom:20px;}
+
+	.myItem {padding:50px 0;}
+	.myItem .inner {height:280px;}
+	.myItem .pic {width:400px;}
+	.myItem i {width:60px; height:60px; margin-top:-30px; right:-30px;}
+	.myItem .info {height:280px; margin-left:445px;}
+	.myItem .intro {max-height:255px;}
+	.myItem h3 {font-size:20px; margin-bottom:10px;}
+	.myItem p {font-size:14px;}
+
+	.myItem:nth-child(2n) i {left:-30px;}
+	.myItem:nth-child(2n) .info {margin-right:445px;}
+	/*投资者关系_社会责任*/
+	.rsItem .inner {height:205px;}
+	.rsItem .info {height:205px; margin-left:445px;}
+	.rsItem .intro {max-height:182px;}
+	/*新闻中心_媒体聚焦*/
+	.noticeList {margin-bottom:10px;}
+	.noticeItem {margin-bottom:15px; padding-bottom:10px;}
+	.noticeItem .text {margin-left:75px;}
+	/*内页类别菜单*/
+	.subCate {margin-bottom:25px;}
+	.subCate li {font-size:18px; padding:0 25px;}
+	.subCate li a {padding-bottom:15px;}
+	/*投资者关系_财务报告*/
+	.finance ul {margin-bottom:30px;}
+	.finance li {padding:10px 0 10px 40px; background-position: left 17px;}
+	/*投资者关系_股市信息*/
+	.dividend, .stock {padding:35px 0;}
+	.dividend h2 {margin-bottom:25px; width:auto;}
+	.dividend .info {width:auto;}
+	.dividend li.left .box {padding-left:30px;}
+	.stock .box {width:auto;}
+	/*投资者关系_首页*/
+	.investor .bannerTop .box {width:54%;}
+	.investor .bannerTop .more {margin-top:20px;}
+
+	.investor .title {font-size:28px; margin-bottom:25px;}
+	.notice, .stockInfo {padding:30px 0;}
+	.notice li a {padding:25px;}
+	.notice li .text {margin-left:70px;}
+
+	.stockInfo .info {width:auto;}
+	.stockInfo .more {width: 100%;}
+	.statements {padding:30px 0;} 
+	.statements .list {width:auto; margin-bottom:0;}
+	.statements dl {float:none; padding-right:0; width:auto; padding-bottom:15px;}
+	.statements dt {margin-bottom:15px; font-size:18px; padding-bottom:5px;}
+	.statements dd {margin-bottom:15px;}
+	.statements dd a {padding-left:40px;}
+	.statements dd span {font-size:16px;}
+
+	.socialZr {padding:30px 0;}
+	.socialZr .intro {width:auto; padding:0 5%;}
+	.socialZr .list li {font-size:20px;}
+	.socialZr .list li i {width:62px; height:45px;}
+
+	.team li {width:48%; padding:0 1% 1.5%;}
+	.team li.first {width:auto; float:none;}
+
+	.contact {padding:40px 0;}
+	.contact li {font-size:16px;}
+	.contact li i {margin-bottom:10px;}
+	/*产品与技术_技术前沿 && 产品与技术_大数据中心*/
+	.technology {padding:35px 0;}
+	.technology h2 {font-size:26px; margin-bottom:20px;}
+	.technology .intro {padding:0;}
+	.technology .intro p {margin-bottom:20px;}
+
+	.techItem {padding:30px 0;}
+
+	.techItem.last h3 {font-size:26px; margin-bottom:20px;}
+	/*产品与技术_系列产品*/
+	.proTop .title h2 {font-size:36px;}
+	.proTop .title p {font-size:18px;}
+	.proTop .info {width:50%;}
+	.proTop .pic {width:50%;}
+
+	.proMid {padding:10% 0;}
+	.proMid .info {width:auto; float:none;}
+	.proMid .btm h3 {font-size:28px; margin-bottom:10px;}
+	.proMid .btm p {font-size:16px; line-height: 1.75em;}
+	.proMid .top li span {width:38px; height:43px;}
+	.proMid .top li i {width:20px; height:20px; margin:9px auto;}
+
+	.proBtm {padding:30px 0;}
+	.proBtm .title {margin-bottom:15px;}
+	.proBtm .title h3 {font-size:28px; margin-bottom:5px;}
+	.proBtm th {font-size:18px; padding:10px;}
+	.proBtm td {font-size:16px;}
+
+	.proSol {padding:40px 0;}
+	.proSol ul {padding:0 2%;}
+	.proSol li {font-size:14px;}
+	.proSol li a {padding:20px 10px;}
+	.proSol li i {width:80px; height:70px;}
+	/*首页标题*/
+	.hmTitle p {font-size:16px;}
+	/*首页系列产品*/
+	.hmPro li h2, .hmTitle h2 {font-size:28px; margin-bottom:15px;}	
+	/*首页解决方案*/		
+	.hmSol .box {padding:0 40px;}
+	.hmSol li a {padding:8% 20px;}
+	.hmSol li .info {padding-left:90px; background-size:60px auto;}
+	.hmSol li .info:before {left:70px; height:60px; margin-top:-30px;}
+	.hmSol li h3 {font-size:18px; margin-bottom:5px;}
+	.hmSol li p {font-size:14px; line-height: 1.75em; height:3.5em;}
+	.hmSol .owl-nav button {margin-top:-29px;}
+	.hmSol .owl-nav .owl-prev {left:-40px;}
+	.hmSol .owl-nav .owl-next {right:-40px;}
+	.hmSol .owl-nav span {width:30px; height:58px;}
+	/*首页新闻中心*/
+	.hmNews ul {width:auto;}
+	.hmNews li {float:none; width:auto; padding-right:0; padding-bottom:3%;}
+	.hmNews li a {padding-top:3%;}
+	/*产品与技术_频道页*/
+	.proCenter .bannerTop .box {width:54%;}
+	.proCenter .bannerTop .more {margin-top:20px;}
+
+	.proTitle h2 {font-size:28px; margin-bottom:15px;}
+	.proTitle p {font-size:16px;}
+
+	.proBox .tab li h3 {font-size:20px;}
+	.proBox .tab li .info {margin-top:5px;}
+	.proBox .tab li p {font-size:14px; margin-bottom:5px;}
+	.proBox .tab li span {font-size:14px;}
+
+	.frontier {padding:40px 0;}
+	.frontier li span {font-size:16px;}
+	.frontier .list {margin-bottom:25px;}
+	.frontier .more {font-size:18px;}
+
+	.dataCenter .proTitle {padding-top:6%;}
+	.dataCenter .proTitle h2 {margin-bottom:10px;}
+	.dataCenter .more {font-size:16px; bottom:10%;}
+
+	.proMeta {padding:40px 0;}
+	.proMeta .proTitle {width:auto;}
+	.proMeta ul {padding:0 3%;}
+	.proMeta li {padding-top:30px; padding-bottom:30px;}
+	.proMeta .more {font-size:18px;}
+	
+	/*产品系列_光伏产品*/
+	.gfIntro {padding:35px 0;}
+	.gfIntro h2 {font-size:26px; margin-bottom:20px;}
+	.gfIntro .intro {padding:0;}
+	.gfIntro .intro p {margin-bottom:20px;}
+
+	.proItem {padding:30px 0;}
+
+	.proNum li span {font-size:36px; padding-right:5px;}
+
+	.assembly ul {width:103%;}
+	.assembly li {width:31%;}
+	.assembly li .thumbnail {margin-bottom:10px;}
+	.assembly li p {font-size:14px;}
+	.assembly li p:before {margin-bottom:5px;}
+}
+@media only screen and (max-width:768px){
+	/*全局样式*/
+	.wrapper {padding:20px 0;}
+	.blank, .blank.add {height:50px;}
+	/*全站底部*/
+	.footer .top {padding:20px 0;}
+
+	.pagesList {float:none; margin-bottom:5px;}
+	.pagesList ul, .share {float:none; font-size:0; line-height: normal; text-align:center;}
+	.pagesList li {display:inline-block; float:none; line-height: 30px;}
+
+	.social {float:none;}
+	.share ul {margin-right:0;}
+	.share li {display:inline-block; float:none;}
+	.share li a {width:28px; height:28px; background-size:13px auto;}
+
+	.links {float:none; margin:10px auto 0;}
+	.links span {height:30px; line-height: 30px;}
+
+	.backTop {width:30px; height:30px;}
+	/*全站头部*/
+	.header.fixed .nav li, .header.fixed .other .btn span {line-height: 50px;}
+	.header.fixed .navDrop {top:51px;}
+	/*logo*/
+	.logo, .header.fixed .logo {padding:10px 0;}
+        .logo a {
+            width: 177px;
+            height: 40px;
+        }
+	/*other*/
+	.other .btn span {line-height: 50px; width:45px; background-size:15px auto;}
+	/*顶部导航*/
+	.nav {top:51px;}
+	.nav ul {padding-bottom:51px;}
+	.navDrop ul {padding-bottom:0;}
+	/*navBtn*/
+	.navBtn {height:50px; width:45px;}
+	.navBtn span {width:18px; height:1px; margin-top:-0.5px;}
+	.navBtn span:before, .navBtn span:after {top:-6px; height:1px;}
+	.navBtn span:after {top:auto; bottom:-6.5px;}
+	/*顶部搜索*/
+	.searchForm {top:55px; right:-47px; padding:8px; width:220px;}
+	.searchForm .input {margin-right:40px;}
+	.searchForm .text {height:30px;}
+	.searchForm .submit {height:30px; line-height: 30px; width:35px;}
+	
+	/*新闻中心_集团新闻 && 新闻中心_行业动态*/
+	.newsList ul, .newsList.mr ul {width:104%; margin-bottom:5px;}
+	.newsList li, .newsList.mr li {width:47%; padding-right:3%; padding-bottom:15px;}
+	.newsList li .thumbnail, .newsList li .intro {margin-bottom:5px;}
+	.newsList li time, .newsList li h2 {margin-bottom:0;}
+	.newsList li .more {padding-bottom:5px;}
+	/*新闻中心_行业动态*/
+	.newsList li .date {margin-bottom:5px;}
+	.newsList li .date time {height:26px; line-height: 26px; margin-top:-20px; width:80px; font-size:12px;}
+	/*新闻中心_媒体聚焦*/
+	.focusItem {margin-bottom:15px;}
+	.focusItem .thumbnail {width:120px;}
+	.focusItem .info {margin-left:130px;}
+	.focusItem .date, .focusItem .more {display:none;}
+	.focusItem .text {margin:0; padding-bottom:5px;}
+	.focusItem h2 {font-size:16px; margin-bottom:5px;}
+	.focusItem .intro {font-size:14px; margin-bottom:0; line-height: 1.75em; max-height: 3.5em;}
+	/*新闻中心_资料下载*/
+	.download {margin-bottom:20px;}
+	.download h2 {font-size:22px; margin-bottom:15px;}
+	.download ul {width:105%;}
+	.download li {width:45%; padding-right:5%; padding-bottom:15px;}
+	.download li .pic {margin-bottom:20px;}
+	.download li i {width:30px; height:30px; bottom:-15px;}
+	.download li p {font-size:14px;}
+	/*人才发展_频道页 && 新闻中心_首页*/
+	.bannerTop {padding:50px 0;}
+	.bannerTop #newsTop {padding-bottom:10px; margin-bottom:10px;}
+	.bannerTop .meta {font-size:14px; margin-bottom:5px;}
+	.bannerTop .box {width:90%; padding:0 5%;}
+	.bannerTop h2 {font-size:18px; margin-bottom:10px;}
+	.bannerTop p {font-size:14px;}
+	.bannerTop .more {font-size:14px;}
+	.bannerTop .more a {background-size:auto 12px; padding-right:20px;}
+	.bannerTop .btn {margin-top:15px;}
+	.bannerTop .btn span {width:30px; height:30px; background-size:auto 18px;}
+	/*新闻中心_首页*/
+	.newsTitle {font-size:22px; margin-bottom:15px;}
+	.readMore {font-size:16px; padding-top:15px;}
+
+  #proBox .item h3{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+  }
+
+	.groupNews, .industry {padding:20px 0;}
+	.groupNews li .info {padding:10px;}
+	.groupNews li time {margin-bottom:0;}
+	.groupNews li h2, .groupNews li .intro {margin-bottom:5px;}
+
+	.industry .list {padding:0; margin-bottom:15px;}
+	.industry li {padding-bottom:10px; margin-bottom:10px;}
+	.industry li .thumbnail {width:110px;}
+	.industry li .info {margin-left:120px; margin-bottom:0;}
+	.industry li h2 {font-size:16px;  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-height: none;}
+	.industry li p {height:auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+	.industry li time {position:static; left:auto; bottom:auto;}
+
+	.mediaNews ul {width:auto;}
+	.mediaNews li {float:none; width:auto; padding-right:0; padding-bottom:10px;}
+	.mediaNews li a {padding:15px;}
+	.mediaNews li i {font-size:42px;}
+	.mediaNews li .text {margin-left:60px; height:auto;}
+	.mediaNews li h2 {font-size:16px; line-height: 1.5em; max-height:3em;}
+	.mediaNews li p {font-size:14px; line-height: 1.75em; max-height:3.5em;}
+
+	.access .title {background-size:auto 35px; padding-top:43px; margin-bottom:15px;}
+	.access .title h2 {font-size:20px; margin-bottom:5px;}
+	.access .box {margin-bottom:20px;}
+	.access .left {margin-bottom:15px;}
+	.access dd {font-size:16px;}
+	.access dd span {padding-left:30px;}
+	.access .readMore {font-size:16px;}
+	/*新闻中心_详情页*/
+	.newsDetails .title, .singlePage .title {font-size:26px; margin-bottom:20px;}
+	.newsDetails .entry p, .singlePage .entry p {margin-bottom:20px;}
+	/*人才发展_人才理念*/
+	.idea .title {margin-bottom:15px;}
+	.idea .entry {font-size:14px; line-height: 1.75em;}
+	.idea .entry p {margin-bottom:40px;}
+	.idea .entry p:after {height:20px; bottom:-30px;}
+
+	.idea .list ul {width:auto;}
+	.idea .list li {float:none; width:auto; padding-right:0; padding-bottom:15px;}
+	.idea .list li .info {padding:20px 15px;}
+	.idea .list li h3 {font-size:18px;}
+	/*人才发展_频道页*/
+	.development .bannerTop {padding:50px 0;}
+	.development .bannerTop .box {width:auto;}
+	.development .bannerTop .more {margin-top:10px;}
+
+	.devTitle {font-size:22px; margin-bottom:10px;}
+	.concept {padding:20px 0;}
+	.concept .intro {margin-bottom:15px; padding:0;}
+	.concept .list ul {padding:0 1px 1px;}
+	.concept .list li {width:50%;}
+	.concept .list li a {padding:20% 10px; margin-bottom:-1px;}
+	.concept .list li span {font-size:18px;}
+	.concept .list li a:hover {padding:20% 10px;}
+	.concept .list li a:hover i {margin-bottom:5px; width:63px; height:63px;}
+
+	.recruit .top {padding:40px 0;}
+	.recruit .btm a {font-size:16px; padding:10px;}
+	.recruit .btm a i {background-size:auto 12px; padding-right:20px;}
+	/*人才发展_明阳大学 && 投资者关系_社会责任*/
+	.mingyang {padding:25px 0;}
+	.mingyang h2 {font-size:22px; margin-bottom:15px;}
+	.mingyang .intro p {margin-bottom:10px;}
+
+	.myItem {padding:30px 0;}
+	.myItem .inner {height:auto;}
+	.myItem .pic {width:auto; height:auto; float:none; padding-bottom:71.448%; position:relative;}
+	.myItem i {right:auto; top:auto; margin-top:0; left:50%; margin-left:-30px; bottom:-30px;}
+	.myItem .info {margin-left:0; margin-top:20px; padding:20px; height:auto;}
+	.myItem .intro {position:static; left:auto; top:auto; width:auto; padding-right:0; max-height: none; transform:none;}
+	.myItem h3 {text-align:center; font-size:18px;}
+
+	.myItem:nth-child(2n) .pic {float:none;}
+	.myItem:nth-child(2n) i {left:50%;}
+	.myItem:nth-child(2n) .info {margin-right:0; margin-top:20px;}
+	.myItem:nth-child(2n) .intro {padding-left:0;}
+	/*投资者关系_社会责任*/
+	.rsItem .pic {padding-bottom:51.136%;}
+	/*投资者关系_公告*/
+	.noticeList {margin-bottom:10px;}
+	.noticeItem .date {width:55px;}
+	.noticeItem .date i {font-size:32px; padding-bottom:10px;}
+	.noticeItem .date i:after {bottom:2px;}
+	.noticeItem .date time {font-size:12px;}
+	.noticeItem .text {margin-left:65px;}
+	.noticeItem h2 {font-size:16px; margin-bottom:5px;}
+	.noticeItem p {font-size:14px; line-height: 1.75em;}
+	/*投资者关系_公告详情页*/
+	.noticeDetails .title {font-size:26px; margin-bottom:20px;}
+	.noticeDetails .entry p {margin-bottom:20px;}
+	/*内页类别菜单*/
+	.subCate {margin-bottom:15px;}
+	.subCate li {font-size:14px; padding:0 10px;}
+	.subCate li a {padding:5px 0 10px;}
+	/*投资者关系_财务报告*/
+	.finance ul {margin-bottom:20px;}
+	.finance li .title {font-size:16px; margin-right:75px;}
+	.finance li .download {padding-left:20px;}
+	.finance li .download:before {left:10px;}
+	/*投资者关系_股市信息*/
+	.dividend, .stock {padding:25px 0;}
+	.dividend h2 {margin-bottom:15px; font-size:18px;}
+	.dividend li {float:none; width:auto; border-bottom:1px solid #d9d9d9;}
+	.dividend li:last-child {border-bottom:none;}
+	.dividend li.small, .dividend li.left, .dividend li.large {width:auto;}
+	.dividend li .box {padding:20px;}
+	.dividend li.left .box {padding-left:20px; border-right:none;}
+	.dividend li span {float:left;}
+.dividend li .price{float:none;}
+	/*投资者关系_首页*/
+	.investor .bannerTop {padding:50px 0;}
+	.investor .bannerTop .box {width:auto;}
+	.investor .bannerTop .more {margin-top:10px;}
+
+	.investor .title {font-size:22px; margin-bottom:15px;}
+	.notice ul {width:auto;}
+	.notice li {float:none; width:auto; padding-right:0; padding-bottom:10px;}
+	.notice li a {padding:15px;}
+	.notice li .text {margin-left:60px; height:auto;}
+	.notice li h2 {font-size: 16px;line-height: 1.5em;max-height: 3em;}
+	.notice li h2 span {background-size:auto 20px; padding-right:55px;}
+	.notice li p {font-size: 14px; line-height: 1.75em; max-height: 3.5em;}
+	.notice li time i {font-size:42px;}
+
+	.stockInfo .info {margin-bottom:20px;}
+	.stockInfo .info::after {bottom:-55px;}
+	.stockInfo ul {margin-bottom:0; border-bottom:1px solid #d9d9d9;}
+	.stockInfo li {float:none; width:auto; border-bottom:1px solid #d9d9d9;}
+	.stockInfo li:last-child {border-bottom:none;}
+	.stockInfo li.small, .stockInfo li.left, .stockInfo li.large {width:auto;}
+	.stockInfo li .box {padding:20px;}
+	.stockInfo li.left .box {padding-left:20px; margin-right:0;}
+	.stockInfo li span {float:left;}
+	.socialZr .intro {padding:0;}
+	.socialZr .list ul {padding:0;}
+	.socialZr .list li {font-size:14px;}
+	.socialZr .list li i {width:41px; height:30px; margin-bottom:5px;}
+
+	.contact .title {margin-bottom:15px;}
+	.contact li {font-size:14px; text-align:left; float:none; width:auto; padding:10px 0;}
+	.contact li i {width:30px; height:22px; float:left; margin:0;}
+	.contact li span {margin-left:40px;}
+	/*产品与技术_技术前沿 && 产品与技术_大数据中心*/
+	.technology {padding:25px 0;}
+	.technology h2 {font-size:22px; margin-bottom:15px;}
+	.technology .intro p {margin-bottom:10px;}
+
+	.techItem {padding:17px 0;}
+	.techItem .box {display:block; width:auto;}
+	.techItem .pic, .techItem .info {display:block; width:auto; padding:8px 0;}
+	.techItem h3 {font-size:20px; background-size:auto 20px; background-position:left 3px; padding-left:30px; margin-bottom:5px;}
+	.techItem .intro {font-size:14px;}
+	.techItem .intro p {padding:0;}
+
+	.techItem:nth-child(2n) .pic, .techItem:nth-child(2n) .info {padding:8px 0;}
+
+	.techItem.last h3 {font-size:20px; margin-bottom:5px;}
+	/*产品与技术_系列产品*/
+	.proTop {padding:20px 0;}
+	.proTop .box {display:block;}
+	.proTop .title {margin-bottom:10px;}
+	.proTop .title h2 {font-size:28px;}
+	.proTop .title p {font-size:16px;}
+	.proTop .info, .proTop .pic {display:block; width:auto; padding:10px 0;}
+
+	.proMid {padding:10% 0;}
+	.proMid .btm h3 {font-size:22px;}
+	.proMid .top {margin-bottom:15px;}
+	.proMid .top li span {width:30px; height:34px;}
+	.proMid .top li i {width:16px; height:16px; margin:7px auto;}
+
+	.proBtm {padding:20px 0;}
+	.proBtm .title {margin-bottom:10px;}
+	.proBtm .title h3 {font-size:22px;}
+	.proBtm .title p {font-size:16px;}
+	.proBtm th {font-size:16px; padding:5px;}
+	.proBtm td {font-size:14px; padding:5px;}
+
+	.proSol {padding:25px 0;}
+	.proSol h3 {font-size:22px; margin-bottom:15px;}
+	.proSol ul {padding:0 1%;}
+	.proSol li {width:50%;}
+	.proSol li a {padding:15px 10px;}
+	.proSol li i {width:50px; height:43px;}
+
+	.proFile span {font-size:14px;}
+	/*首页标题*/
+	.hmTitle {margin-bottom:15px;}
+	.hmTitle p {padding:0;}
+	/*首页轮播图*/
+	.hmSlide .owl-dots span {width:30px; height:5px;}
+	/*首页系列产品*/
+	.hmPro li {width:auto; float:none;}
+	.hmPro li .box {width:93.75%; padding:10% 3.125%;}
+	.hmPro li h2, .hmTitle h2 {font-size:22px; margin-bottom:10px;}
+	.hmPro li p {font-size:16px;}
+	.hmPro li span {margin-top:10px; font-size:14px;}
+	.hmPro li span i {background-size:30px auto; padding-right:35px;}
+	/*首页解决方案*/
+	.hmSol {padding:25px 0;}
+	.hmSol .box {padding:0 30px;}
+	.hmSol li {float:none; width:auto;}
+	.hmSol li a {padding:15px;}
+	.hmSol li .info {padding-left:75px; background-size:50px auto;}
+	.hmSol li .info:before {left:60px;}
+	.hmSol li h3 {font-size:16px;}
+	.hmSol li p {font-size:14px; line-height: 1.5em; height:3em;}
+	.hmSol .owl-nav button {margin-top:-20px;}
+	.hmSol .owl-nav .owl-prev {left:-30px;}
+	.hmSol .owl-nav .owl-next {right:-30px;}
+	.hmSol .owl-nav span {width:21px; height:40px;}
+	/*首页新闻中心*/
+	.hmNews {padding:25px 0;}
+	.hmNews li {padding-bottom:15px;}
+	.hmNews li a {padding-top:15px;}
+	.hmNews li .thumbnail {width:110px;}
+	.hmNews li .info {margin-left:120px; padding-right:0;}
+	.hmNews li h3 {font-size:16px;}
+	.hmNews li .text {display:none;}
+	.hmNews li time {left:120px;}
+	.hmNews li .more {right:0;}
+	/*新闻中心_详情页*/
+	.newsDetails .title, .singlePage .title {font-size:22px; margin-bottom:15px;}
+	.newsDetails .entry p, .singlePage .entry p {margin-bottom:10px;}
+	/*产品与技术_频道页*/
+	.proCenter .bannerTop {padding:50px 0;}
+	.proCenter .bannerTop .box {width:auto;}
+	.proCenter .bannerTop .more {margin-top:10px;}
+	
+	.proTitle h2 {font-size:22px; margin-bottom:10px;}
+	.proTitle p {font-size:14px;}
+	.proBox .tab, .proBox .tabItem {display:none;}
+	#proBox {display:block;}
+
+	.frontier {padding:25px 0;}
+	.frontier .list {margin-bottom:0; padding:8px 0;}
+	.frontier li {float:none; width:auto; padding:8px 0;}
+	.frontier li .box {display:table; width:100%;}
+	.frontier li i {display:table-cell; vertical-align: middle; width:59px; height:45px;}
+	.frontier li span {display:table-cell; vertical-align: middle; text-align:left; padding-left:15px; font-size:14px;}
+	.frontier .more {font-size:14px;}
+
+	.dataCenter .proTitle {padding-top:6%;}
+	.dataCenter .proTitle p {font-size:14px; line-height: 1.5em;}
+	.dataCenter .more {font-size:12px; bottom:8%;}
+
+	.proMeta {padding:25px 0;}
+	.proMeta ul {padding:0;}
+	.proMeta li {padding-top:20px; padding-bottom:20px;}
+	.proMeta li p {padding:10px 0 0; font-size:14px;}
+	.proMeta .round {width:90px; padding-top:90px;}
+	.proMeta .round span {font-size:12px;}
+	.proMeta .round span i {font-size:30px;}
+	.proMeta .more {font-size:14px;}
+	/*投资者关系_公告详情页*/
+	.noticeDetails .title {font-size:22px; margin-bottom:15px;}
+	.noticeDetails .entry p {margin-bottom:10px;}
+	/*产品系列_光伏产品*/
+	.gfIntro {padding:25px 0;}
+	.gfIntro h2 {font-size:22px; margin-bottom:15px;}
+	.gfIntro .intro p {margin-bottom:10px;}
+
+	.proItem {padding:17px 0;}
+	.proItem .box {display:block; width:auto;}
+	.proItem .pic, .proItem .info {display:block; width:auto; padding:8px 0;}
+	.proItem h3 {font-size:20px; background-size:auto 20px; background-position:left 3px; padding-left:30px; margin-bottom:5px;}
+	.proItem .intro {font-size:14px;}
+	.proItem .intro p {padding:0;}
+
+	.proItem:nth-child(2n) .pic, .proItem:nth-child(2n) .info {padding:8px 0;}
+
+	.proNum {padding:50px 0 35px;}
+	.proNum li {width:32.333%; padding:0 0.5%; font-size:12px; line-height: 1.35em;}
+	.proNum li span {display:block; font-size:28px; padding-right:0; margin-bottom:10px;}
+
+	.assembly {padding:25px 0;}
+	.assembly ul {width:102%;}
+	.assembly li {width:48%; padding-right:2%;}
+}
+@media only screen and (max-width:540px){
+	/*新闻中心_首页*/
+	.groupNews ul {width:auto;}
+	.groupNews li {float:none; width:auto; padding-right:0; padding-bottom:10px;}
+	/*投资者关系_首页*/
+	.team li {width:auto; float:none;}
+	.team li .info h3 {font-size:16px; margin-bottom:0;}
+	.team li .info p {font-size:14px;}
+
+	/*产品与技术_频道页*/
+	.dataCenter .proTitle {padding-top:5%;}
+	.dataCenter {padding-bottom:320px;}
+	
+	
+	
+  .teamList h3{font-size: 16px;}
+  .teamList .focusItem .thumbnail,
+  .teamList  .focusItem .info{width: 100%;margin: 0}
+	.teamList .focusItem{margin-bottom: 20px}
+	.teamList .focusItem .thumbnail{margin-bottom: 15px;}
+}
+@media only screen and (max-width:420px){
+	/*新闻中心_集团新闻 && 新闻中心_行业动态*/
+	.newsList ul, .newsList.mr ul {width:auto;}
+	.newsList li, .newsList.mr li {width:auto; padding-right:0; float:none;}
+	.newsList.mr li .thumbnail {margin-right:0;}
+}
