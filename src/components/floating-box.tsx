@@ -17,42 +17,50 @@ export function FloatingBox() {
   };
 
   return (
-    <div className="fixed bottom-[2%] right-3 z-40 flex flex-col gap-2">
+    <div className="fixed right-0 top-[280px] z-40 flex flex-col items-end gap-2">
+      {/* 邮箱咨询 */}
       <a
         href="mailto:lsf2672@163.com"
-        className="group flex h-11 items-center justify-end overflow-hidden rounded-sm bg-brand text-white shadow-md transition-all duration-300 hover:w-[120px]"
+        className="group flex px-4 flex-col items-center justify-center overflow-hidden rounded-l-sm bg-[#F14702] py-2 text-white shadow-md transition-all duration-300  w-[84px] hover:w-[120px]"
         aria-label="邮箱咨询"
         title="邮箱咨询"
       >
-        <span className="whitespace-nowrap pr-2 text-[13px] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+        <Mail className="h-5 w-5 shrink-0" />
+        <span className="whitespace-nowrap text-[13px] leading-tight">
           邮箱咨询
         </span>
-        <Mail className="mx-2.5 h-5 w-5 shrink-0" />
       </a>
 
+      {/* 咨询电话 */}
       <a
         href="tel:18551251523"
-        className="group flex h-11 flex-col items-end justify-center overflow-hidden rounded-sm bg-brand text-white shadow-md transition-all duration-300 hover:h-[68px]"
+        className="group flex h-[57px] px-4 items-center overflow-hidden rounded-l-sm bg-[#F14702] text-white shadow-md transition-all duration-300 w-[84px] hover:w-[260px]"
         aria-label="咨询电话"
         title="咨询电话"
       >
-        <span className="flex items-center pr-2 text-[13px]">
-          咨询电话
-          <Phone className="ml-1.5 mr-2.5 h-4 w-4 shrink-0" />
-        </span>
-        <span className="whitespace-nowrap pr-2 text-[13px] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+        <div className="flex shrink-0 flex-col items-center justify-center">
+          <Phone className="h-5 w-5 shrink-0" />
+          <span className="whitespace-nowrap text-[13px] leading-tight ">
+            咨询电话
+          </span>
+        </div>
+        <span className="block keep-all whitespace-nowrap overflow-hidden  text-[24px] leading-[57px]  transition-opacity duration-300 [font-family:Arial,sans-serif]">
           {PHONE}
         </span>
       </a>
 
+      {/* 返回顶部 */}
       <button
         type="button"
         onClick={toTop}
-        className="group flex h-11 items-center justify-center rounded-sm bg-slate text-white shadow-md transition-colors duration-300 hover:bg-brand"
+        className="group flex px-4 flex-col items-center justify-center overflow-hidden rounded-l-sm bg-[#F14702] py-2 text-white shadow-md transition-all duration-300 w-[84px] hover:w-[120px]"
         aria-label="返回顶部"
         title="返回顶部"
       >
-        <ArrowUp className="h-5 w-5" />
+        <ArrowUp className="h-5 w-5 shrink-0" />
+        <span className="whitespace-nowrap text-[13px] leading-tight">
+          返回顶部
+        </span>
       </button>
     </div>
   );

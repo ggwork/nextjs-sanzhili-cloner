@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <SmoothScroll />
       <Header />
-      <main className="flex-1 full overflow-x-hidden">
+      <main className="flex-1 full overflow-hidden">
         <HeroBanner />
         <AboutSection />
         <ApplicationFields />

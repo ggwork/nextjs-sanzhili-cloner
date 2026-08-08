@@ -51,7 +51,7 @@ export function Header({ activeIndex = 0 }: { activeIndex?: number }) {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden flex-1 justify-center shrink-0 overflow-hidden md:flex">
+        <nav className="hidden flex-1 justify-center shrink-0 overflow-y-visible md:flex">
           <ul className="flex full">
             {NAV_ITEMS.map((item, i) => (
               <li key={item.label} className="group relative">

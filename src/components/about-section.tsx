@@ -42,7 +42,7 @@ export function AboutSection() {
               {ABOUT_TEXT}
             </p>
             <Reveal variant="fade-right" className="mt-5">
-              <MoreButton href="#">了解更多</MoreButton>
+              <MoreButton href="/about">了解更多</MoreButton>
             </Reveal>
           </Reveal>
 

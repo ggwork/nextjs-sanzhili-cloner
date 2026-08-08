@@ -145,7 +145,7 @@
     /* The source scales rem with viewport (100/90/80/70px). We keep the root at
        the browser default so Tailwind utilities stay correct, and translate the
        site's rem values into px / clamp() in components instead. */
-    scroll-behavior: smooth;
+    /* scroll-behavior removed: prevents animated scroll-to-top on route change */
   }
   body {
     @apply bg-background text-foreground;

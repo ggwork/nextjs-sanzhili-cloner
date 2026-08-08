@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 
 /**
@@ -10,6 +11,8 @@ import Lenis from "lenis";
  * scroll is used, matching Luxy's guard.
  */
 export function SmoothScroll() {
+  const pathname = usePathname();
+
   useEffect(() => {
     if (window.innerWidth <= 1200) return;
 
@@ -35,6 +38,16 @@ export function SmoothScroll() {
       delete (window as unknown as { __lenis?: Lenis }).__lenis;
     };
   }, []);
+
+  // On route change, instantly jump to top — no smooth animation.
+  useEffect(() => {
+    const lenis = (window as unknown as { __lenis?: Lenis }).__lenis;
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: true });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname]);
 
   return null;
 }
