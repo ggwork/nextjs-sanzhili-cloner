@@ -12,8 +12,8 @@ import type { NewsItem } from "@/types";
  */
 export function NewsList({ items }: { items: NewsItem[] }) {
   return (
-    <Reveal variant="fade-up">
-      <ul className="mx-auto" style={{ maxWidth: 926 }}>
+    <Reveal variant="fade-up" >
+      <ul className="mx-auto  p-4" style={{ maxWidth: 926 }}>
         {items.map((it, i) => (
           <li
             key={i}

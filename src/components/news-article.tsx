@@ -20,7 +20,7 @@ export function NewsArticleView({ article }: { article: NewsArticle }) {
 
   return (
     <Reveal variant="fade-up">
-      <div className="mx-auto pb-[60px]" style={{ maxWidth: 926 }}>
+      <div className="mx-auto p-4 pb-[60px]" style={{ maxWidth: 926 }}>
         <h1
           className="text-center text-[27px] text-ink"
           style={{ margin: "58.5px 0 18px" }}
