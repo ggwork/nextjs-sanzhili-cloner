@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { Reveal } from "@/components/reveal";
-import { SLOGAN } from "@/data/site";
 
 /**
  * Source `.wel-four`: full-width bg image (1920×300), content overlaid. Left:
@@ -15,15 +15,15 @@ import { SLOGAN } from "@/data/site";
  */
 export function SloganSection() {
   const [open, setOpen] = useState(false);
+  const t = useTranslations();
 
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative h-[240px] overflow-hidden md:h-[300px]">
       <Image
         src="/images/slogan-bg.jpg"
         alt=""
-        width={1920}
-        height={300}
-        className="block w-full"
+        fill
+        className="object-cover"
         sizes="100vw"
         priority
       />
@@ -36,10 +36,10 @@ export function SloganSection() {
               className="mb-2.5 font-thin text-white"
               style={{ fontSize: "clamp(22px,2vw,28px)" }}
             >
-              {SLOGAN.title}
+              {t("slogan.title")}
             </h3>
             <p className="text-white" style={{ fontSize: "clamp(24px,2.6vw,34px)" }}>
-              {SLOGAN.subtitle}
+              {t("slogan.subtitle")}
             </p>
           </Reveal>
 
@@ -52,7 +52,7 @@ export function SloganSection() {
             <button
               type="button"
               onClick={() => setOpen(true)}
-              aria-label="播放视频"
+              aria-label={t("slogan.playAria")}
               className="group block"
             >
               <span className="relative inline-flex h-[60px] w-[60px] items-center justify-center rounded-full border-2 border-white/80 transition-transform duration-500 group-hover:scale-110">
@@ -68,7 +68,7 @@ export function SloganSection() {
                 className="mt-2.5 block text-white"
                 style={{ fontSize: "clamp(28px,2.6vw,36px)", letterSpacing: "3px" }}
               >
-                {SLOGAN.videoLabel}
+                {t("slogan.videoLabel")}
               </span>
             </button>
           </Reveal>
@@ -93,15 +93,20 @@ export function SloganSection() {
                 className="object-cover opacity-60"
                 sizes="80vw"
               />
-              <span className="relative text-white/80">视频内容</span>
+              <span className="relative text-white/80">{t("slogan.videoContent")}</span>
             </div>
             <button
               type="button"
               onClick={() => setOpen(false)}
-              aria-label="关闭"
+              aria-label={t("slogan.closeAria")}
               className="absolute -top-10 right-0"
             >
-              <Image src="/images/icon-close.png" alt="关闭" width={30} height={30} />
+              <Image
+                src="/images/icon-close.png"
+                alt={t("slogan.closeAlt")}
+                width={30}
+                height={30}
+              />
             </button>
           </div>
         </div>

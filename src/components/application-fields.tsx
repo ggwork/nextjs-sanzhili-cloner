@@ -3,8 +3,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Scrollbar } from "swiper/modules";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
+import { useRouter } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import { APPLICATION_FIELDS } from "@/data/site";
@@ -23,6 +24,9 @@ import { cn } from "@/lib/utils";
  */
 export function ApplicationFields() {
   const router = useRouter();
+  const t = useTranslations();
+  
+  
 
   return (
     <section
@@ -32,7 +36,7 @@ export function ApplicationFields() {
       <div className="container-content">
         <Reveal variant="fade-up">
           <SectionTitle tone="light" className="mb-[35px]">
-            应用领域
+            {t("sections.applicationFields")}
           </SectionTitle>
         </Reveal>
       </div>
@@ -43,9 +47,13 @@ export function ApplicationFields() {
           loop
           speed={600}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
-          slidesPerView={3}
+          slidesPerView={1.2}
           slidesPerGroup={1}
-          spaceBetween={40}
+          spaceBetween={20}
+          breakpoints={{
+            750: { slidesPerView: 2.5, spaceBetween: 30 },
+            1400: { slidesPerView: 3.5, spaceBetween: 40 },
+          }}
           scrollbar={{ draggable: true }}
           className="appfields-swiper !pb-[85px]"
         >
@@ -55,7 +63,7 @@ export function ApplicationFields() {
                 <div className="relative w-full" style={{ paddingBottom: "64%" }}>
                   <Image
                     src={f.image}
-                    alt={f.title}
+                    alt={t(f.title)}
                     fill
                     className="absolute inset-0 object-cover"
                     sizes="(max-width: 750px) 80vw, 28vw"
@@ -67,11 +75,11 @@ export function ApplicationFields() {
                 {/* slate info panel, absolute bottom */}
                 <div className="absolute bottom-0 left-1/2 box-border h-[400px] w-[80%] -translate-x-1/2 bg-slate pt-10 text-center transition-colors duration-500 group-hover:bg-brand select-none">
                   <h3 className="text-[24px] text-white">
-                    {f.title}
+                    {t(f.title)}
                     <span className="mx-auto my-5 block h-[2px] w-10 bg-white" />
                   </h3>
                   <p className="mx-auto mb-5 h-[170px] w-[90%] overflow-hidden text-left text-[15px] leading-relaxed text-white">
-                    {f.description}
+                    {t(f.description)}
                   </p>
                   <Link
                     href={f.href}
@@ -79,7 +87,7 @@ export function ApplicationFields() {
                       "mx-auto flex h-[45px] w-[40%] items-center justify-center bg-brand text-[14px] text-white transition-colors duration-500 group-hover:bg-white group-hover:text-brand",
                     )}
                   >
-                    了解更多
+                    {t("common.learnMore")}
                     <MoreArrow className="ml-[7%] transition-transform duration-300 group-hover:translate-x-[5px]" />
                   </Link>
                 </div>

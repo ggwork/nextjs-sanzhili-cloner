@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { Reveal } from "@/components/reveal";
-import { ABOUT_PHILOSOPHY } from "@/data/site";
 
 /**
  * Source `.pro-five`: margin-top 198px (desktop). Full-width background photo
@@ -18,6 +18,8 @@ import { ABOUT_PHILOSOPHY } from "@/data/site";
  * within it (no overlap into the following section).
  */
 export function AboutPhilosophy() {
+  const t = useTranslations();
+
   return (
     <section className="relative mt-[60px] overflow-visible md:mt-[198px]">
       <Image
@@ -36,7 +38,7 @@ export function AboutPhilosophy() {
               className="text-[15px] leading-[30px] text-[#666] md:text-[16px] md:leading-[32px]"
               style={{ textAlign: "center", textJustify: "auto" }}
             >
-              {ABOUT_PHILOSOPHY}
+              {t("about.philosophy")}
             </p>
           </div>
         </div>

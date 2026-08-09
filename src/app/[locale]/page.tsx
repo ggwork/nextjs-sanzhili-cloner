@@ -1,3 +1,4 @@
+import { setRequestLocale } from "next-intl/server";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { Header } from "@/components/header";
 import { HeroBanner } from "@/components/hero-banner";
@@ -7,16 +8,22 @@ import { ProductCenter } from "@/components/product-center";
 import { NewsCenter } from "@/components/news-center";
 import { SloganSection } from "@/components/slogan-section";
 import { ContactForm } from "@/components/contact-form";
-import { CtaSection } from "@/components/cta-section";
 import { Footer } from "@/components/footer";
 import { FloatingBox } from "@/components/floating-box";
 
-export default function Home() {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
       <SmoothScroll />
       <Header />
-      <main className="flex-1 full overflow-hidden">
+      <main className="flex-1 w-full overflow-hidden">
         <HeroBanner />
         <AboutSection />
         <ApplicationFields />
@@ -24,7 +31,6 @@ export default function Home() {
         <NewsCenter />
         <SloganSection />
         <ContactForm />
-        {/* <CtaSection /> */}
       </main>
       <Footer />
       <FloatingBox />

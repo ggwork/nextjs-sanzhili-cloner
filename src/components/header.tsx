@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { NAV_ITEMS, PHONE } from "@/data/site";
+import { LanguageSwitcher } from "@/components/language-switcher";
 import { cn } from "@/lib/utils";
 
 /**
@@ -18,6 +20,7 @@ import { cn } from "@/lib/utils";
 export function Header({ activeIndex = 0 }: { activeIndex?: number }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const t = useTranslations();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY >= 1);
@@ -37,13 +40,13 @@ export function Header({ activeIndex = 0 }: { activeIndex?: number }) {
       <div className="container-inner flex h-[100px] items-center justify-start max-[1440px]:w-[93.75%]">
         {/* Logo */}
         <Link
-          href="#"
-          aria-label="苏州三之立高分子材料有限公司"
+          href="/"
+          aria-label={t("header.logoAlt")}
           className="relative block h-[68px] w-[200px] shrink-0  max-[1280px]:h-[40px] max-[1280px]:w-[178px]"
         >
           <Image
             src="/images/logo.png"
-            alt="苏州三之立高分子材料有限公司"
+            alt={t("header.logoAlt")}
             fill
             priority
             className="object-contain object-left"
@@ -52,7 +55,7 @@ export function Header({ activeIndex = 0 }: { activeIndex?: number }) {
 
         {/* Desktop nav */}
         <nav className="hidden flex-1 justify-center shrink-0 overflow-y-visible md:flex">
-          <ul className="flex full">
+          <ul className="flex">
             {NAV_ITEMS.map((item, i) => (
               <li key={item.label} className="group relative">
                 <Link
@@ -62,7 +65,7 @@ export function Header({ activeIndex = 0 }: { activeIndex?: number }) {
                     i === activeIndex && "text-brand",
                   )}
                 >
-                  {item.label}
+                  {t(item.label)}
                   <span
                     className={cn(
                       "absolute inset-x-[16px] -bottom-[3px] h-[3px] origin-left bg-brand transition-transform duration-300",
@@ -78,7 +81,7 @@ export function Header({ activeIndex = 0 }: { activeIndex?: number }) {
                         href={c.href}
                         className="block h-[42px] text-center text-[15px] leading-[42px] text-ink hover:text-brand"
                       >
-                        {c.label}
+                        {t(c.label)}
                       </Link>
                     ))}
                   </div>
@@ -88,23 +91,26 @@ export function Header({ activeIndex = 0 }: { activeIndex?: number }) {
           </ul>
         </nav>
 
-        {/* Phone (desktop) */}
-        <div className="hidden shrink-0 items-center gap-[8px] text-[18px] font-medium md:flex">
-          <Image
-            src="/images/h-phone.png"
-            alt="电话"
-            width={30}
-            height={30}
-            className="object-contain"
-          />
-          <span className="text-[22px] leading-[30px] text-[#013995]">{PHONE}</span>
+        {/* Language switcher + Phone (desktop) */}
+        <div className="hidden shrink-0 items-center gap-[14px] text-[18px] font-medium md:flex">
+          <LanguageSwitcher />
+          <div className="flex items-center gap-[8px]">
+            <Image
+              src="/images/h-phone.png"
+              alt={t("header.phoneAlt")}
+              width={30}
+              height={30}
+              className="object-contain"
+            />
+            <span className="text-[22px] leading-[30px] text-[#013995]">{PHONE}</span>
+          </div>
         </div>
 
         {/* Hamburger (mobile) */}
         <button
           type="button"
           onClick={() => setOpen((o) => !o)}
-          aria-label="打开菜单"
+          aria-label={t("header.menuAria")}
           aria-expanded={open}
           className="flex h-10 w-10 flex-col items-center justify-center gap-[5px] md:hidden"
         >
@@ -141,7 +147,7 @@ export function Header({ activeIndex = 0 }: { activeIndex?: number }) {
                 className="block py-3 text-[16px] text-ink"
                 onClick={() => setOpen(false)}
               >
-                {item.label}
+                {t(item.label)}
               </Link>
               {item.children && (
                 <div className="pb-2 pl-4">
@@ -152,14 +158,17 @@ export function Header({ activeIndex = 0 }: { activeIndex?: number }) {
                       className="block py-1.5 text-[14px] text-body"
                       onClick={() => setOpen(false)}
                     >
-                      {c.label}
+                      {t(c.label)}
                     </Link>
                   ))}
                 </div>
               )}
             </li>
           ))}
-          <li className="py-3 text-[18px] font-medium text-brand">{PHONE}</li>
+          <li className="flex items-center justify-between py-3">
+            <span className="text-[18px] font-medium text-brand">{PHONE}</span>
+            <LanguageSwitcher />
+          </li>
         </ul>
       </div>
     </header>

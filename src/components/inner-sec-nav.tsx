@@ -1,17 +1,18 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Reveal } from "@/components/reveal";
 import type { AboutSubNavTab } from "@/types";
 import { cn } from "@/lib/utils";
 
 interface InnerSecNavProps {
-  /** Breadcrumb root label (e.g. "关于我们", "产品中心"). */
+  /** Breadcrumb root label message key (e.g. "nav.about", "nav.products"). */
   rootLabel: string;
-  /** Breadcrumb current-page label (also determines the active tab). */
+  /** Breadcrumb current-page label message key (also determines the active tab). */
   currentLabel: string;
-  /** Sub-tabs on the right side. */
+  /** Sub-tabs on the right side (labels are message keys). */
   tabs: AboutSubNavTab[];
 }
 
@@ -25,9 +26,12 @@ interface InnerSecNavProps {
  *
  * General inner-page secondary nav — reused across every section (关于我们,
  * 产品中心, …). Section-specific wrappers (e.g. `AboutSecNav`) bake in their
- * own root label + tabs.
+ * own root label + tabs. All label props are i18n message keys; this component
+ * translates them with the current locale.
  */
 export function InnerSecNav({ rootLabel, currentLabel, tabs }: InnerSecNavProps) {
+  const t = useTranslations();
+
   return (
     <div className="border-b border-[#dedede]">
       <div className="container-content flex h-[70px] items-center justify-between">
@@ -40,7 +44,7 @@ export function InnerSecNav({ rootLabel, currentLabel, tabs }: InnerSecNavProps)
               height={18}
               className="object-contain align-middle"
             />
-            <span>{rootLabel}</span>
+            <span>{t(rootLabel)}</span>
             <Image
               src="/images/icon-chevron-right.png"
               alt=""
@@ -48,22 +52,22 @@ export function InnerSecNav({ rootLabel, currentLabel, tabs }: InnerSecNavProps)
               height={11}
               className="object-contain align-middle"
             />
-            <span>{currentLabel}</span>
+            <span>{t(currentLabel)}</span>
           </nav>
         </Reveal>
 
         <Reveal variant="fade-left">
           <nav className="flex items-center">
-            {tabs.map((t) => (
+            {tabs.map((tab) => (
               <Link
-                key={t.label}
-                href={t.href}
+                key={tab.label}
+                href={tab.href}
                 className={cn(
                   "ml-[18px] text-[14px] leading-[70px] transition-colors duration-500 first:ml-0 hover:text-brand md:ml-[30px] md:text-[18px]",
-                  t.label === currentLabel ? "text-brand" : "text-[#666]",
+                  tab.label === currentLabel ? "text-brand" : "text-[#666]",
                 )}
               >
-                {t.label}
+                {t(tab.label)}
               </Link>
             ))}
           </nav>

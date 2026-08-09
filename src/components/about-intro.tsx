@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { Reveal } from "@/components/reveal";
-import { ABOUT_INTRO_TEXT } from "@/data/site";
 
 /**
  * Source `.pro-one`: full-width section with dark background photo
@@ -16,6 +16,8 @@ import { ABOUT_INTRO_TEXT } from "@/data/site";
  * photo first on mobile and `md:flex-row` keeps text left on desktop.
  */
 export function AboutIntro() {
+  const t = useTranslations();
+
   return (
     <section
       className="bg-cover bg-center"
@@ -32,7 +34,7 @@ export function AboutIntro() {
               className="text-[14px] leading-[2] text-white/80 md:text-[16px]"
               style={{ textIndent: "2em", textAlign: "left", textJustify: "auto" }}
             >
-              {ABOUT_INTRO_TEXT}
+              {t("about.text")}
             </p>
           </Reveal>
 
@@ -43,7 +45,7 @@ export function AboutIntro() {
           >
             <Image
               src="/images/about-intro-photo.jpg"
-              alt="苏州三之立高分子材料有限公司"
+              alt={t("about.photoAlt")}
               width={400}
               height={267}
               className="h-auto w-full md:max-w-[400px]"

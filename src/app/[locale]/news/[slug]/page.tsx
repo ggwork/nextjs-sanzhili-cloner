@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
@@ -10,20 +12,32 @@ import { NewsArticleView } from "@/components/news-article";
 import { CtaSection } from "@/components/cta-section";
 import { NEWS_ARTICLES, NEWS_BANNER, NEWS_TABS } from "@/data/site";
 
-/** Pre-render the 3 cloned articles as static pages. */
+/** Pre-render the cloned articles in every locale as static pages. */
 export function generateStaticParams() {
-  return NEWS_ARTICLES.map((a) => ({ slug: a.slug }));
+  return routing.locales.flatMap((locale) =>
+    NEWS_ARTICLES.map((a) => ({ locale, slug: a.slug })),
+  );
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const article = NEWS_ARTICLES.find((a) => a.slug === slug);
+  const t = await getTranslations({ locale, namespace: "articles" });
+  const tMeta = await getTranslations({ locale, namespace: "metadata" });
+  const title = article ? t(`${slug}.title`) : "";
   return {
-    title: `${article?.title ?? "新闻"}-苏州三之立高分子材料有限公司`,
+    title: `${title || "News"}-${tMeta("siteName")}`,
+    alternates: {
+      languages: {
+        "zh-CN": `/zh/news/${slug}`,
+        en: `/en/news/${slug}`,
+        "x-default": `/zh/news/${slug}`,
+      },
+    },
   };
 }
 
@@ -34,9 +48,10 @@ export async function generateMetadata({
 export default async function ArticlePage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
   const article = NEWS_ARTICLES.find((a) => a.slug === slug);
   if (!article) notFound();
 
@@ -44,11 +59,11 @@ export default async function ArticlePage({
     <>
       <SmoothScroll />
       <Header activeIndex={5} />
-      <main className="flex-1 full overflow-x-hidden">
+      <main className="flex-1 w-full overflow-x-hidden">
         <AboutSubBanner {...NEWS_BANNER} />
         <InnerSecNav
-          rootLabel="新闻中心"
-          currentLabel="公司新闻"
+          rootLabel="nav.news"
+          currentLabel="nav.companyNews"
           tabs={NEWS_TABS}
         />
         <NewsArticleView article={article} />

@@ -48,12 +48,12 @@ export interface NewsItem {
   href: string;
 }
 
-/** A cloned news article detail page (source NewsDetail.aspx). */
+/** A cloned news article detail page (source NewsDetail.aspx). Body paragraphs
+ *  are stored per-locale in the message catalogue under `articles.<slug>`. */
 export interface NewsArticle {
   slug: string;
   title: string;
   date: string;
-  paragraphs: string[];
 }
 
 export interface NewsColumn {

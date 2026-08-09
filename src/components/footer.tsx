@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { NAV_ITEMS, FOOTER } from "@/data/site";
 import { cn } from "@/lib/utils";
 
@@ -15,6 +16,7 @@ import { cn } from "@/lib/utils";
 export function Footer() {
   const [linksOpen, setLinksOpen] = useState(false);
   const year = new Date().getFullYear();
+  const t = useTranslations();
 
   return (
     <footer className="bg-footer-bg text-white">
@@ -28,7 +30,7 @@ export function Footer() {
                   href={item.href}
                   className="text-[16px] text-white opacity-40 transition-opacity duration-500 hover:opacity-100"
                 >
-                  {item.label}
+                  {t(item.label)}
                 </Link>
                 {i < NAV_ITEMS.length - 1 && (
                   <span className="block h-1 w-1 rounded-full bg-white opacity-40" />
@@ -37,7 +39,7 @@ export function Footer() {
             ))}
           </ul>
 
-          <div className="relative w-full md:w-[23%]">
+          {/* <div className="relative w-full md:w-[23%]">
             <button
               type="button"
               onClick={() => setLinksOpen((o) => !o)}
@@ -46,7 +48,7 @@ export function Footer() {
                 "text-white/80",
               )}
             >
-              友情链接
+              {t("footer.friendLinks")}
               <span className="relative flex h-3 w-4 flex-col justify-between">
                 <span
                   className={cn(
@@ -69,24 +71,24 @@ export function Footer() {
               <div className="absolute left-0 top-[50px] z-50 w-full bg-white shadow-lg">
                 {FOOTER.friendLinks.map((l) => (
                   <Link
-                    key={l.label}
+                    key={l.href}
                     href={l.href}
                     className="block px-10 py-2.5 text-[14px] text-body transition-colors hover:text-[#244497]"
                   >
-                    {l.label}
+                    {t(l.label)}
                   </Link>
                 ))}
               </div>
             )}
-          </div>
+          </div> */}
         </div>
 
         {/* Bot: contact info */}
         <div className="border-b border-footer-border py-8">
           <div className="mt-[15px] space-y-2">
-            {[FOOTER.address, FOOTER.phone, FOOTER.email].map((t) => (
-              <p key={t} className="text-[16px] text-white opacity-50">
-                {t}
+            {[FOOTER.address, FOOTER.phone, FOOTER.email].map((key) => (
+              <p key={key} className="text-[16px] text-white opacity-50">
+                {t(key)}
               </p>
             ))}
           </div>
@@ -98,18 +100,18 @@ export function Footer() {
             <span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
               Copyright&nbsp;&nbsp;©&nbsp;&nbsp;2021-{year}
             </span>
-            &nbsp;{FOOTER.copyrightOwner}&nbsp;&nbsp;All Rights Reserved.{" "}
-            <Link href="#" className="hover:underline">
-              网站地图
+            &nbsp;{t("footer.copyrightOwner")}&nbsp;&nbsp;All Rights Reserved.{" "}
+            <Link href="/sitemap.xml" className="hover:underline">
+              {t("footer.siteMap")}
             </Link>{" "}
-            备案号：
+            {t("footer.icpLabel")}
             <Link href={FOOTER.icpHref} className="hover:underline">
-              {FOOTER.icp}
+              {t("footer.icp")}
             </Link>
           </div>
-          <Link href="https://www.400301.com/" className="hover:underline">
-            网站建设：腾云建站仅向商家提供技术服务
-          </Link>
+          {/* <Link href="https://www.400301.com/" className="hover:underline">
+            {t("footer.webCredit")}
+          </Link> */}
         </div>
       </div>
     </footer>

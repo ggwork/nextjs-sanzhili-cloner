@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { Reveal } from "@/components/reveal";
 import { SectionTitle } from "@/components/section-title";
 import { ProductCard } from "@/components/product-card";
@@ -11,11 +12,15 @@ import { PRODUCTS } from "@/data/site";
  * hover, text #333 → #fff). Card shadow `1px 1px 20px #dedede`. AOS fade-up.
  */
 export function ProductCenter() {
+  const t = useTranslations();
+
   return (
     <section className="bg-alt">
       <div className="container-content py-[60px]">
         <Reveal variant="fade-up">
-          <SectionTitle className="mb-[55px] mt-[65px]">产品中心</SectionTitle>
+          <SectionTitle className="mb-[55px] mt-[65px]">
+            {t("sections.productCenter")}
+          </SectionTitle>
         </Reveal>
 
         <div className="grid grid-cols-1 gap-[2.7%] sm:grid-cols-2 md:grid-cols-3">

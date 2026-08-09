@@ -1,7 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Reveal } from "@/components/reveal";
 import type { ProductDetail } from "@/types";
 
@@ -15,17 +16,19 @@ import type { ProductDetail } from "@/types";
 export function DetailGallery({
   detail,
   backHref,
-  backLabel = "返回",
+  backLabel,
 }: {
   detail: ProductDetail;
   backHref: string;
   backLabel?: string;
 }) {
+  const t = useTranslations();
+
   return (
     <Reveal variant="fade-up">
       <div className="mx-auto pb-[60px]" style={{ maxWidth: 926 }}>
         <h1 className="text-center text-[27px] text-ink" style={{ margin: "58.5px 0 18px" }}>
-          {detail.title}
+          {t(detail.title)}
         </h1>
         <div className="mb-[27px] text-center text-[14px] text-[#666]">{detail.date}</div>
 
@@ -35,7 +38,7 @@ export function DetailGallery({
               <Image
                 key={src}
                 src={src}
-                alt={`${detail.title} ${i + 1}`}
+                alt={`${t(detail.title)} ${i + 1}`}
                 width={1000}
                 height={750}
                 className="h-auto w-full"
@@ -44,7 +47,9 @@ export function DetailGallery({
             ))}
           </div>
         ) : (
-          <p className="py-16 text-center text-[16px] text-[#999]">详情内容整理中</p>
+          <p className="py-16 text-center text-[16px] text-[#999]">
+            {t("common.detailPending")}
+          </p>
         )}
 
         <div className="mt-[50px] text-center">
@@ -52,7 +57,7 @@ export function DetailGallery({
             href={backHref}
             className="inline-block border border-[#ccc] px-6 py-2 text-[14px] text-[#666] transition-colors hover:border-brand hover:text-brand"
           >
-            {backLabel}
+            {backLabel ?? t("common.back")}
           </Link>
         </div>
       </div>

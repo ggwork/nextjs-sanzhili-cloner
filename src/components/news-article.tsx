@@ -1,6 +1,7 @@
 "use client";
 
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Reveal } from "@/components/reveal";
 import type { NewsArticle } from "@/types";
 
@@ -8,8 +9,15 @@ import type { NewsArticle } from "@/types";
  * Source `.nei.detail .content`: a centered (~926px) article column — title
  * (27px/#333, centered), date (14px/#666, centered), then the body paragraphs
  * (16px/#666, line-height 2, text-indent 2em, justify). Ends with a back link.
+ *
+ * The article's `title` is an i18n key; the body paragraphs are read from the
+ * message catalogue under `articles.<slug>.paragraphs` so they render in the
+ * current locale.
  */
 export function NewsArticleView({ article }: { article: NewsArticle }) {
+  const t = useTranslations();
+  const paragraphs = t.raw(`articles.${article.slug}.paragraphs`) as string[];
+
   return (
     <Reveal variant="fade-up">
       <div className="mx-auto pb-[60px]" style={{ maxWidth: 926 }}>
@@ -17,14 +25,14 @@ export function NewsArticleView({ article }: { article: NewsArticle }) {
           className="text-center text-[27px] text-ink"
           style={{ margin: "58.5px 0 18px" }}
         >
-          {article.title}
+          {t(article.title)}
         </h1>
         <div className="mb-[27px] text-center text-[14px] text-[#666]">
           {article.date}
         </div>
 
         <div>
-          {article.paragraphs.map((p, i) => (
+          {paragraphs.map((p, i) => (
             <p
               key={i}
               className="text-[#666]"
@@ -45,7 +53,7 @@ export function NewsArticleView({ article }: { article: NewsArticle }) {
             href="/news"
             className="inline-block border border-[#ccc] px-6 py-2 text-[14px] text-[#666] transition-colors hover:border-brand hover:text-brand"
           >
-            返回
+            {t("common.back")}
           </Link>
         </div>
       </div>

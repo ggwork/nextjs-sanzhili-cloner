@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { Reveal } from "@/components/reveal";
 import { SectionTitle } from "@/components/section-title";
 import { MoreButton } from "@/components/more-button";
-import { ABOUT_TEXT } from "@/data/site";
 
 /**
  * Source `.wel-one`: padding-top 60px, faint bg image bottom/center. Title
@@ -13,6 +13,8 @@ import { ABOUT_TEXT } from "@/data/site";
  * fade-right / zoom-out(500).
  */
 export function AboutSection() {
+  const t = useTranslations();
+
   return (
     <section
       id="about"
@@ -21,7 +23,7 @@ export function AboutSection() {
     >
       <div className="container-content">
         <Reveal variant="fade-up">
-          <SectionTitle>关于我们</SectionTitle>
+          <SectionTitle>{t("sections.about")}</SectionTitle>
         </Reveal>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-0">
@@ -39,10 +41,10 @@ export function AboutSection() {
                 textAlign: "justify",
               }}
             >
-              {ABOUT_TEXT}
+              {t("about.text")}
             </p>
             <Reveal variant="fade-right" className="mt-5">
-              <MoreButton href="/about">了解更多</MoreButton>
+              <MoreButton href="/about">{t("common.learnMore")}</MoreButton>
             </Reveal>
           </Reveal>
 
@@ -54,7 +56,7 @@ export function AboutSection() {
           >
             <Image
               src="/images/about-map.png"
-              alt="苏州三之立高分子材料 全球应用"
+              alt={t("about.mapAlt")}
               width={750}
               height={448}
               className="h-auto w-full"

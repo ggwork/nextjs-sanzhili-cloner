@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Reveal } from "@/components/reveal";
 import { MoreArrow } from "@/components/icons";
-import { CTA } from "@/data/site";
 import { cn } from "@/lib/utils";
 
 /**
@@ -13,18 +13,20 @@ import { cn } from "@/lib/utils";
  * slides in and the right arrow flies out (all 0.5s). Orange 160×45px.
  */
 export function CtaSection() {
+  const t = useTranslations();
+
   return (
     <section className="bg-white py-[70px] text-center">
       <Reveal variant="fade-up" className="container-content">
         <h2 className="text-ink" style={{ fontSize: 30 }}>
-          {CTA.title}
+          {t("cta.title")}
         </h2>
         <p className="mx-auto mt-2.5 mb-[30px] text-body" style={{ fontSize: 14 }}>
-          {CTA.body}
+          {t("cta.body")}
         </p>
 
         <Link
-          href="#"
+          href="#contact"
           className={cn(
             "group relative inline-block h-[45px] w-[160px] bg-brand text-[14px] leading-[45px] text-white",
             "max-[1400px]:w-[180px] max-[1200px]:w-[200px]",
@@ -35,13 +37,13 @@ export function CtaSection() {
             <MoreArrow />
           </span>
 
-          {/* label: 联系我们 (default) → Contact us (hover) */}
+          {/* label: current-locale (default) → other-locale (hover) */}
           <span className="relative inline-block h-5 w-[80px] align-middle whitespace-nowrap transition-all duration-500 group-hover:ml-[30px]">
             <span className="absolute bottom-0 left-1/2 block h-full -translate-x-1/2 bg-brand transition-opacity duration-500 group-hover:opacity-0">
-              {CTA.cn}
+              {t("cta.buttonDefault")}
             </span>
             <span className="absolute bottom-0 left-1/2 block h-0 -translate-x-1/2 overflow-hidden bg-brand opacity-0 transition-all duration-500 group-hover:h-full group-hover:opacity-100">
-              {CTA.en}
+              {t("cta.buttonHover")}
             </span>
           </span>
 

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
@@ -10,19 +12,33 @@ import { DetailGallery } from "@/components/detail-gallery";
 import { CtaSection } from "@/components/cta-section";
 import { CASE_BANNER, CASE_DETAILS } from "@/data/site";
 
-/** Pre-render every cloned case detail as a static page. */
+/** Pre-render every cloned case detail in every locale as a static page. */
 export function generateStaticParams() {
-  return CASE_DETAILS.map((d) => ({ slug: d.slug }));
+  return routing.locales.flatMap((locale) =>
+    CASE_DETAILS.map((d) => ({ locale, slug: d.slug })),
+  );
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const detail = CASE_DETAILS.find((d) => d.slug === slug);
-  return { title: `${detail?.title ?? "产品案例"}-苏州三之立高分子材料有限公司` };
+  const t = await getTranslations({ locale, namespace: "details.cases" });
+  const tMeta = await getTranslations({ locale, namespace: "metadata" });
+  const title = detail ? t(`${slug}.title`) : "";
+  return {
+    title: `${title || "PEEK"}-${tMeta("siteName")}`,
+    alternates: {
+      languages: {
+        "zh-CN": `/zh/cases/${slug}`,
+        en: `/en/cases/${slug}`,
+        "x-default": `/zh/cases/${slug}`,
+      },
+    },
+  };
 }
 
 /**
@@ -32,20 +48,22 @@ export async function generateMetadata({
 export default async function CaseDetailPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
   const detail = CASE_DETAILS.find((d) => d.slug === slug);
   if (!detail) notFound();
+  const t = await getTranslations("common");
 
   return (
     <>
       <SmoothScroll />
       <Header activeIndex={3} />
-      <main className="flex-1 full overflow-x-hidden">
+      <main className="flex-1 w-full overflow-x-hidden">
         <AboutSubBanner {...CASE_BANNER} />
-        <InnerSecNav rootLabel="产品案例" currentLabel="产品案例" tabs={[]} />
-        <DetailGallery detail={detail} backHref="/cases" backLabel="返回列表" />
+        <InnerSecNav rootLabel="nav.cases" currentLabel="nav.cases" tabs={[]} />
+        <DetailGallery detail={detail} backHref="/cases" backLabel={t("backToList")} />
         <CtaSection />
       </main>
       <Footer />

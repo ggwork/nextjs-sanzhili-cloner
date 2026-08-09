@@ -1,4 +1,7 @@
-import Link from "next/link";
+"use client";
+
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import type { Product } from "@/types";
 
 interface ProductCardProps {
@@ -20,6 +23,8 @@ export function ProductCard({
   imageHeight = 270,
   titleSize = 18,
 }: ProductCardProps) {
+  const t = useTranslations();
+
   return (
     <Link
       href={product.href}
@@ -30,14 +35,14 @@ export function ProductCard({
           className="block h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
           style={{ backgroundImage: `url('${product.image}')` }}
           role="img"
-          aria-label={product.title}
+          aria-label={t(product.title)}
         />
       </div>
       <p
         className="overflow-hidden text-ellipsis whitespace-nowrap bg-white p-5 text-center text-ink transition-colors duration-500 group-hover:bg-slate group-hover:text-white"
         style={{ fontSize: titleSize }}
       >
-        {product.title}
+        {t(product.title)}
       </p>
     </Link>
   );

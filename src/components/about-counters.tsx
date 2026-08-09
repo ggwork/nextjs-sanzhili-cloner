@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { Reveal } from "@/components/reveal";
 import { ABOUT_COUNTERS } from "@/data/site";
 
@@ -13,6 +14,8 @@ import { ABOUT_COUNTERS } from "@/data/site";
  * Responsive: 3 columns desktop, 2 columns mobile (3rd item wraps).
  */
 export function AboutCounters() {
+  const t = useTranslations();
+
   return (
     <section className="bg-[#f9f9f9] py-[45px]">
       <Reveal variant="fade-up" className="container-content">
@@ -23,10 +26,10 @@ export function AboutCounters() {
                 className="text-brand"
                 style={{ fontSize: "clamp(32px, 3vw, 41.4px)", lineHeight: 1.2 }}
               >
-                {c.value}
+                {t(c.value)}
                 {c.suffix && (
                   <span className="ml-[10px] text-[16px] font-normal text-[#666]">
-                    {c.suffix}
+                    {t(c.suffix)}
                   </span>
                 )}
               </div>
@@ -34,7 +37,7 @@ export function AboutCounters() {
                 className="mt-3 max-w-[329px] text-[14px] leading-[24px] text-ink md:text-[16px]"
                 style={{ textAlign: "center", textJustify: "auto" }}
               >
-                {c.description}
+                {t(c.description)}
               </p>
             </li>
           ))}

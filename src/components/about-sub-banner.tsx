@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
 import { Reveal } from "@/components/reveal";
 import type { SubBanner } from "@/types";
 
@@ -14,9 +15,17 @@ import type { SubBanner } from "@/types";
  * AOS `fade-zoom-in` on the `.font` wrapper.
  *
  * Reusable across every inner page — only the photo + EN/CN title differ, so
- * they're passed as props (e.g. `<AboutSubBanner {...ABOUT_BANNER} />`).
+ * they're passed as props (e.g. `<AboutSubBanner {...ABOUT_BANNER} />`). The
+ * `en`/`cn` fields are i18n message keys; the current locale renders its own
+ * language as the large title and the other language as the small subtitle.
  */
 export function AboutSubBanner({ image, en, cn }: SubBanner) {
+  const locale = useLocale();
+  const t = useTranslations();
+
+  const big = locale === "zh" ? t(cn) : t(en);
+  const small = locale === "zh" ? t(en) : t(cn);
+
   return (
     <section className="relative w-full">
       <div
@@ -25,7 +34,7 @@ export function AboutSubBanner({ image, en, cn }: SubBanner) {
       >
         <Image
           src={image}
-          alt={cn}
+          alt={big}
           fill
           priority
           sizes="100vw"
@@ -36,13 +45,13 @@ export function AboutSubBanner({ image, en, cn }: SubBanner) {
             variant="fade-zoom-in"
             className="flex flex-col items-center"
           >
-            {en ? (
-              <span className="text-[18px] leading-[1.5] uppercase text-white md:text-[54px] md:leading-[81px]">
-                {en}
+            {small ? (
+              <span className="text-[18px] leading-[1.5] uppercase text-white md:text-[45px] md:leading-[67.5px]">
+                {small}
               </span>
             ) : null}
-            <span className="text-[20px] leading-[1.5] text-white md:text-[45px] md:leading-[67.5px]">
-              {cn}
+            <span className="text-[20px] leading-[1.5] text-white md:text-[54px] md:leading-[81px]">
+              {big}
             </span>
           </Reveal>
         </div>

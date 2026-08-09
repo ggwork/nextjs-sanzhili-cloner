@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
@@ -12,10 +14,26 @@ import { AboutIntro } from "@/components/about-intro";
 import { AboutCounters } from "@/components/about-counters";
 import { AboutPhilosophy } from "@/components/about-philosophy";
 
-/** Matches the live inner-page <title>: "企业介绍-苏州三之立高分子材料有限公司". */
-export const metadata = {
-  title: "企业介绍-苏州三之立高分子材料有限公司",
-};
+/** Localized metadata + hreflang alternates for the 企业介绍 page. */
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "pageTitles" });
+  const tMeta = await getTranslations({ locale, namespace: "metadata" });
+  return {
+    title: `${t("about")}-${tMeta("siteName")}`,
+    alternates: {
+      languages: {
+        "zh-CN": "/zh/about",
+        en: "/en/about",
+        "x-default": "/zh/about",
+      },
+    },
+  };
+}
 
 /**
  * About Us (企业介绍) inner page — source: aboutus.aspx?ClassID=11.
@@ -24,17 +42,25 @@ export const metadata = {
  * sub-banner → secondary nav (breadcrumb + tabs) → title → intro (pro-one)
  * → counters (pro-three) → philosophy (pro-five) → CTA.
  */
-export default function AboutPage() {
+export default async function AboutPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("pageTitles");
+
   return (
     <>
       <SmoothScroll />
       <Header activeIndex={1} />
-      <main className="flex-1 full overflow-x-hidden">
+      <main className="flex-1 w-full overflow-x-hidden">
         <AboutSubBanner {...ABOUT_BANNER} />
-        <AboutSecNav currentLabel="企业介绍" />
+        <AboutSecNav currentLabel="nav.companyIntro" />
 
         <Reveal variant="fade-up" className="py-[50px] text-center md:py-[58px]">
-          <SectionTitle>企业介绍</SectionTitle>
+          <SectionTitle>{t("about")}</SectionTitle>
         </Reveal>
 
         <AboutIntro />

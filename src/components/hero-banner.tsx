@@ -3,6 +3,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import "swiper/css";
 import "swiper/css/pagination";
 import { BANNER_SLIDES } from "@/data/site";
@@ -15,6 +16,7 @@ import { BANNER_SLIDES } from "@/data/site";
  * AOS `fade-zoom-in`.
  */
 export function HeroBanner() {
+  const t = useTranslations();
   const scrollToAbout = () => {
     const lenis = (window as unknown as { __lenis?: { scrollTo: (t: string) => void } }).__lenis;
     if (lenis) lenis.scrollTo("#about");
@@ -33,7 +35,7 @@ export function HeroBanner() {
       >
         {BANNER_SLIDES.map((s, i) => (
           <SwiperSlide key={i}>
-            <a href={s.href} className="block h-full w-full">
+            <div className="block h-full w-full">
               <Image
                 src={s.image}
                 alt=""
@@ -42,7 +44,7 @@ export function HeroBanner() {
                 className="h-full w-full object-cover"
                 sizes="100vw"
               />
-            </a>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
@@ -54,7 +56,7 @@ export function HeroBanner() {
       <button
         type="button"
         onClick={scrollToAbout}
-        aria-label="向下滚动"
+        aria-label={t("hero.scrollDown")}
         className="animate-bounce-down absolute bottom-10 left-1/2 z-10 cursor-pointer"
       >
         <Image

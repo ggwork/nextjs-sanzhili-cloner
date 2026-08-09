@@ -2,8 +2,8 @@
 
 import { useState, type FormEvent } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { Reveal } from "@/components/reveal";
-import { CONTACT_FORM_TITLE } from "@/data/site";
 import { cn } from "@/lib/utils";
 
 /**
@@ -20,6 +20,7 @@ export function ContactForm() {
     country: "",
     remarks: "",
   });
+  const t = useTranslations();
 
   const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setForm((f) => ({ ...f, [k]: e.target.value }));
@@ -27,13 +28,13 @@ export function ContactForm() {
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
     const phoneOk = /^(13|15|18|17|19)\d{9}$/.test(form.phone);
-    if (!form.name) return alert("请输入姓名");
-    if (!form.phone) return alert("请输入电话号码");
-    if (!phoneOk) return alert("手机号码规格有误");
-    if (!form.email) return alert("请输入邮箱");
-    if (!form.country) return alert("请输入国家");
-    if (!form.remarks) return alert("请输入备注");
-    alert("提交成功");
+    if (!form.name) return alert(t("contact.nameRequired"));
+    if (!form.phone) return alert(t("contact.phoneRequired"));
+    if (!phoneOk) return alert(t("contact.phoneInvalid"));
+    if (!form.email) return alert(t("contact.emailRequired"));
+    if (!form.country) return alert(t("contact.countryRequired"));
+    if (!form.remarks) return alert(t("contact.remarksRequired"));
+    alert(t("contact.success"));
     setForm({ name: "", phone: "", email: "", country: "", remarks: "" });
   };
 
@@ -44,7 +45,7 @@ export function ContactForm() {
         <div className="w-1/2 max-md:w-full">
           <Image
             src="/images/contact.jpg"
-            alt="联系我们"
+            alt={t("contact.imageAlt")}
             width={1920}
             height={873}
             className="h-auto w-full"
@@ -55,33 +56,33 @@ export function ContactForm() {
         {/* Right form */}
         <div className="w-[45%] p-5 max-md:w-full">
           <h2 className="mb-2" style={{ fontSize: 25, color: "#777" }}>
-            {CONTACT_FORM_TITLE}
+            {t("contact.title")}
           </h2>
           <form onSubmit={onSubmit}>
             <div className="mt-[30px] flex flex-wrap justify-between">
               <Field
-                placeholder="姓名"
+                placeholder={t("contact.name")}
                 value={form.name}
                 onChange={set("name")}
               />
               <Field
-                placeholder="电话（必填）"
+                placeholder={t("contact.phone")}
                 value={form.phone}
                 onChange={set("phone")}
               />
               <Field
-                placeholder="邮箱"
+                placeholder={t("contact.email")}
                 value={form.email}
                 onChange={set("email")}
               />
               <Field
-                placeholder="国家"
+                placeholder={t("contact.country")}
                 value={form.country}
                 onChange={set("country")}
               />
             </div>
             <textarea
-              placeholder="简单描述您的产品需求"
+              placeholder={t("contact.remarks")}
               value={form.remarks}
               onChange={set("remarks")}
               className="mt-0 box-border h-[95px] w-full border border-line bg-white p-2.5 outline-none"
@@ -93,7 +94,7 @@ export function ContactForm() {
                 "transition-colors duration-500 hover:border-[#1a689a] hover:bg-[#1a689a] hover:text-white",
               )}
             >
-              提交
+              {t("contact.submit")}
             </button>
           </form>
         </div>

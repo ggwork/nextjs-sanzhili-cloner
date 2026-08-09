@@ -1,6 +1,7 @@
 "use client";
 
 import { Mail, Phone, ArrowUp } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { PHONE } from "@/data/site";
 
 /**
@@ -10,6 +11,7 @@ import { PHONE } from "@/data/site";
  * pills that expand their label on hover. Brand-orange accent.
  */
 export function FloatingBox() {
+  const t = useTranslations();
   const toTop = () => {
     const lenis = (window as unknown as { __lenis?: { scrollTo: (t: number) => void } }).__lenis;
     if (lenis) lenis.scrollTo(0);
@@ -22,12 +24,12 @@ export function FloatingBox() {
       <a
         href="mailto:lsf2672@163.com"
         className="group flex px-4 flex-col items-center justify-center overflow-hidden rounded-l-sm bg-[#F14702] py-2 text-white shadow-md transition-all duration-300  w-[84px] hover:w-[120px]"
-        aria-label="邮箱咨询"
-        title="邮箱咨询"
+        aria-label={t("floating.emailConsult")}
+        title={t("floating.emailConsult")}
       >
         <Mail className="h-5 w-5 shrink-0" />
         <span className="whitespace-nowrap text-[13px] leading-tight">
-          邮箱咨询
+          {t("floating.emailConsult")}
         </span>
       </a>
 
@@ -35,13 +37,13 @@ export function FloatingBox() {
       <a
         href="tel:18551251523"
         className="group flex h-[57px] px-4 items-center overflow-hidden rounded-l-sm bg-[#F14702] text-white shadow-md transition-all duration-300 w-[84px] hover:w-[260px]"
-        aria-label="咨询电话"
-        title="咨询电话"
+        aria-label={t("floating.phoneConsult")}
+        title={t("floating.phoneConsult")}
       >
         <div className="flex shrink-0 flex-col items-center justify-center">
           <Phone className="h-5 w-5 shrink-0" />
           <span className="whitespace-nowrap text-[13px] leading-tight ">
-            咨询电话
+            {t("floating.phoneConsult")}
           </span>
         </div>
         <span className="block keep-all whitespace-nowrap overflow-hidden  text-[24px] leading-[57px]  transition-opacity duration-300 [font-family:Arial,sans-serif]">
@@ -54,12 +56,12 @@ export function FloatingBox() {
         type="button"
         onClick={toTop}
         className="group flex px-4 flex-col items-center justify-center overflow-hidden rounded-l-sm bg-[#F14702] py-2 text-white shadow-md transition-all duration-300 w-[84px] hover:w-[120px]"
-        aria-label="返回顶部"
-        title="返回顶部"
+        aria-label={t("floating.backToTop")}
+        title={t("floating.backToTop")}
       >
         <ArrowUp className="h-5 w-5 shrink-0" />
         <span className="whitespace-nowrap text-[13px] leading-tight">
-          返回顶部
+          {t("floating.backToTop")}
         </span>
       </button>
     </div>

@@ -1,0 +1,262 @@
+{
+  "metadata": {
+    "title": "Suzhou PEEK Processing_PEEK Material - Suzhou Sanzhili Polymer Materials Co., Ltd.",
+    "description": "Founded in 2020, Suzhou Sanzhili Polymer Materials Co., Ltd. is a company mainly engaged in the sales of special engineering plastics. The company's main products are Suzhou PEEK processing and PEEK material series, applied to automobiles, consumer electronics, small household appliances, sports and security and other fields. We provide personalized customization services for special materials to meet customers' different needs for special materials.",
+    "keywords": "Suzhou Sanzhili Polymer Materials Co., Ltd., Suzhou PEEK processing, PEEK material",
+    "siteName": "Suzhou Sanzhili Polymer Materials Co., Ltd."
+  },
+  "common": {
+    "more": "More",
+    "learnMore": "Learn More",
+    "back": "Back",
+    "backToList": "Back to List",
+    "detailPending": "Details under compilation"
+  },
+  "header": {
+    "logoAlt": "Suzhou Sanzhili Polymer Materials Co., Ltd.",
+    "phoneAlt": "Phone",
+    "menuAria": "Open menu",
+    "languageSwitchAria": "Switch language"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "companyIntro": "Company Profile",
+    "philosophy": "Business Philosophy",
+    "mission": "Company Mission",
+    "products": "Products",
+    "rawResin": "Raw Resin",
+    "cases": "Product Cases",
+    "guestbook": "Guestbook",
+    "news": "News Center",
+    "companyNews": "Company News",
+    "industryNews": "Industry News",
+    "contact": "Contact Us"
+  },
+  "sections": {
+    "about": "About Us",
+    "applicationFields": "Application Fields",
+    "productCenter": "Product Center",
+    "newsCenter": "News Center"
+  },
+  "about": {
+    "text": "Founded in 2020, Suzhou Sanzhili Polymer Materials Co., Ltd. is a company mainly engaged in the sales of special engineering plastics. The company's main products are the PEEK, PPS, PPA and high-impact ABS series, applied to automobiles, consumer electronics, small household appliances, sports and security and other fields. We provide personalized customization services for special materials to meet customers' different needs for special materials.",
+    "mapAlt": "Sanzhili Polymer Materials Global Applications",
+    "photoAlt": "Suzhou Sanzhili Polymer Materials Co., Ltd.",
+    "counters": [
+      {
+        "value": "2020",
+        "suffix": "Yrs",
+        "description": "Founded in Suzhou in 2020"
+      },
+      {
+        "value": "Focused",
+        "description": "Dedicated to the production and operation of chemical products and new materials, providing customers with quality products and attentive service"
+      },
+      {
+        "value": "Trusted",
+        "description": "Established a stable supply system with renowned manufacturers at home and abroad, and built solid long-term partnerships."
+      }
+    ],
+    "philosophy": "The company adheres to the core positioning of \"green, efficient and intelligent interconnection\", relies on core technologies, core talents and the ability to integrate industry resources, keeps the upstream and downstream industry chain of the new energy sector connected, develops both domestic and international markets in parallel and integrates trade with finance, and focuses on the three major industries of new energy power stations, power generation and electrical equipment manufacturing, striving to build an excellent clean energy platform and provide society with diversified, intelligent and comprehensive energy interconnection services."
+  },
+  "applicationFields": [
+    {
+      "title": "Aerospace",
+      "description": "PEEK is widely used in the aerospace industry, mainly replacing aluminum and other metal materials to manufacture various aircraft parts and reduce the severity of fire hazards. Thanks to its excellent properties, PEEK can be used to make fuel filter screens, bolts, nuts and wire conduits, cabin seats and tables, cabin skin, cable trays and electrical components, cabin door handles, compressors and pump bodies, and other parts."
+    },
+    {
+      "title": "Transportation",
+      "description": "Performance advantages in this field: good machinability, flame retardancy, non-toxicity, wear resistance, corrosion resistance and low particle shedding. When more than 3-4 of these performance advantages are required simultaneously under most application conditions, polyetheretherketone (PEEK) is the material of first choice."
+    },
+    {
+      "title": "Machinery Industry",
+      "description": "Performance advantages in this field: high temperature resistance, excellent machinability, radiation resistance, flame retardancy, low smoke, non-toxicity, hydrolysis resistance and corrosion resistance. When more than 3-4 of these performance advantages are required simultaneously under most application conditions, polyetheretherketone (PEEK) is the material of first choice."
+    },
+    {
+      "title": "Energy Sector",
+      "description": "Performance advantages in this field: high temperature resistance, radiation resistance, flame retardancy, low smoke, hydrolysis resistance, easy processing and corrosion resistance. When more than 3-4 of these performance advantages are required simultaneously under most application conditions, polyetheretherketone (PEEK) is the material of first choice."
+    },
+    {
+      "title": "Electronics & Electrical",
+      "description": "The R&D and production of new materials is mainly oriented toward the electrical appliance industry. Most parts currently used in this industry are modified general-purpose plastics, but core components such as circuit boards and terminal blocks require special materials."
+    }
+  ],
+  "products": [
+    { "title": "PEEK Raw Resin" },
+    { "title": "Glass Fiber Reinforced Resin" },
+    { "title": "Carbon Fiber Reinforced" }
+  ],
+  "productList": [
+    { "title": "PEEK Raw Resin" },
+    { "title": "Glass Fiber Reinforced Resin" },
+    { "title": "Carbon Fiber Reinforced" },
+    { "title": "High Impact ABS" }
+  ],
+  "newsColumns": [
+    {
+      "heading": "Company News",
+      "items": [
+        { "title": "PEEK Compressor Piston Rings", "date": "2022-06-15" },
+        { "title": "PEEK Compressor Valve Plates", "date": "2022-06-15" },
+        { "title": "Production, Applications and Development of PEEK Catheters in the Medical Field", "date": "2022-06-15" },
+        { "title": "New Polymer Material in Daily Life — PEEK", "date": "2022-06-15" },
+        { "title": "Principle and Process of Electrostatic Powder Coating", "date": "2022-06-15" },
+        { "title": "What Harm Does Static Electricity Cause to Sensitive Components?", "date": "2022-06-15" }
+      ]
+    },
+    {
+      "heading": "Industry News",
+      "items": [
+        { "title": "Superior Performance and Development Status of PEEK Special Engineering Plastics", "date": "2022-06-15" },
+        { "title": "New Investment Direction in Engineering Plastics — PEEK", "date": "2022-06-15" },
+        { "title": "PEEK Successfully Applied in Medium-Pressure Constant-Flow Pumps", "date": "2022-06-15" }
+      ]
+    }
+  ],
+  "slogan": {
+    "title": "Integrity First, Service Supreme, Innovation for Strength",
+    "subtitle": "Bearing social responsibility, committed to becoming an international trading service provider",
+    "videoLabel": "Wisdom in Unity",
+    "videoContent": "Video Content",
+    "playAria": "Play video",
+    "closeAria": "Close",
+    "closeAlt": "Close"
+  },
+  "cta": {
+    "title": "Need help with a problem?",
+    "body": "Facing a problem you cannot solve and need our help? We are always here for you.",
+    "buttonDefault": "Contact Us",
+    "buttonHover": "联系我们"
+  },
+  "footer": {
+    "friendLinks": "Friendly Links",
+    "address": "Address: No.8 Weiye Road, Kunshan Development Zone, Suzhou, Jiangsu",
+    "phone": "Tel: 185 5125 1523",
+    "email": "Email: szl0617@sanzhili-pm.com",
+    "copyrightOwner": "Suzhou Sanzhili Polymer Materials Co., Ltd.",
+    "icp": "Su ICP No. 2022026799-1",
+    "siteMap": "Sitemap",
+    "icpLabel": "ICP:",
+    "webCredit": "Website by Tengyun (technical services only)",
+    "friendLinkLabels": ["Tengyun Website Builder", "Baidu", "Baidu"]
+  },
+  "contact": {
+    "title": "Contact us for product requirements",
+    "imageAlt": "Contact Us",
+    "name": "Name",
+    "phone": "Phone (required)",
+    "email": "Email",
+    "country": "Country",
+    "remarks": "Briefly describe your product requirements",
+    "submit": "Submit",
+    "nameRequired": "Please enter your name",
+    "phoneRequired": "Please enter your phone number",
+    "phoneInvalid": "The phone number format is incorrect",
+    "emailRequired": "Please enter your email",
+    "countryRequired": "Please enter your country",
+    "remarksRequired": "Please enter your remarks",
+    "success": "Submitted successfully"
+  },
+  "floating": {
+    "emailConsult": "Email Us",
+    "phoneConsult": "Call Us",
+    "backToTop": "Back to Top"
+  },
+  "banners": {
+    "aboutEn": "About Us",
+    "aboutCn": "关于我们",
+    "productsEn": "",
+    "productsCn": "Product Center",
+    "casesEn": "",
+    "casesCn": "Product Cases",
+    "newsEn": "News",
+    "newsCn": "News Center"
+  },
+  "pageTitles": {
+    "about": "Company Profile",
+    "philosophy": "Business Philosophy",
+    "mission": "Company Mission",
+    "products": "PEEK Resin",
+    "cases": "PEEK Product Cases",
+    "news": "Company News",
+    "industryNews": "Industry News"
+  },
+  "philosophyPoints": [
+    "Continuously innovate and improve the business operation model;",
+    "Uphold the concept of high-quality development;",
+    "Seek win-win partnerships;",
+    "Implement a full-process risk management mechanism."
+  ],
+  "missionPoints": ["Heaven rewards the diligent — live up to your youth"],
+  "details": {
+    "products": {
+      "peek-resin": { "title": "PEEK Raw Resin" },
+      "glass-fiber": { "title": "Glass Fiber Reinforced Resin" },
+      "carbon-fiber": { "title": "Carbon Fiber Reinforced" },
+      "abs": { "title": "High Impact ABS" }
+    },
+    "cases": {
+      "abs-luggage": { "title": "ABS Luggage" },
+      "abs-helmet": { "title": "ABS Safety Helmet" },
+      "peek-product-1": { "title": "PEEK Products" },
+      "peek-product-2": { "title": "PEEK Products" },
+      "peek-product-3": { "title": "PEEK Products" },
+      "peek-product-4": { "title": "PEEK Products" },
+      "peek-tube": { "title": "PEEK Tubing" }
+    }
+  },
+  "articles": {
+    "peek-piston-ring": {
+      "title": "PEEK Compressor Piston Rings",
+      "paragraphs": [
+        "Product name: PEEK compressor piston ring",
+        "The emergence of PEEK (polyetheretherketone) has opened up a new path for the sealing technology of reciprocating compressors. Through repeated design, testing and evaluation of medium- and high-pressure differential piston rings at high temperature and pressure, a practical technology with new materials, new designs and new processes has been developed that is feasible, reliable and suitable for long-term operation.",
+        "Product advantages:",
+        "(1) High strength: The mechanical properties of PEEK are far superior to those of PTFE, making it a high-strength resin material.",
+        "(2) Both toughness and rigidity: With good balance and hardness, piston rings under high pressure do not deform or shed material under reciprocating impact. Rings for low pressure differentials do not require elastic rings and can automatically press against the cylinder wall.",
+        "(3) Fatigue resistance, creep resistance and no cold flow.",
+        "Under alternating stress loads, its excellent fatigue resistance is the best among all plastics and comparable to aluminum alloys. Its rigidity remains good below 260°C.",
+        "(4) Heat resistance: The reinforced heat deflection temperature can reach over 300°C. The theoretical continuous use temperature is measured at 260°C. 160°C is the higher parameter of the compressor design value; as the temperature rises further, the mechanical properties of PEEK decrease linearly.",
+        "(5) Wear resistance: Among all plastics, PEEK has excellent sliding characteristics. The friction coefficient of piston rings produced by Changchun Tianhang is between 0.15 and 0.30, suitable for applications requiring low friction coefficient and wear resistance, and is not prone to damaging the mating surface.",
+        "(6) Low coefficient of expansion",
+        "(7) PV value: It varies with speed, temperature, load and the mating surface, and is several times greater than commonly used polymer materials.",
+        "(8) Corrosion resistance: It dissolves only in concentrated sulfuric acid among acids and bases, and is unaffected by common chemicals."
+      ]
+    },
+    "peek-valve-plate": {
+      "title": "PEEK Compressor Valve Plates",
+      "paragraphs": [
+        "PEEK valve plates have low density and low elastic modulus, reducing impact force and the resulting fatigue damage, greatly extending valve life — under normal conditions far exceeding metal valve plates. They provide good sealing performance with reduced gas leakage and excellent running-in characteristics. Flow characteristics are superior to similar metal valve plates, reducing energy loss caused by gas friction in the valve gap; valve energy consumption can be reduced by 5%-10%. They withstand impacts from solid particles and droplets. Crack propagation after valve plate fracture is slow, and even if a broken plate falls into the cylinder, it will not damage the cylinder. Operating noise is low, and with good self-lubrication, they are suitable for both oil-lubricated and oil-free conditions."
+      ]
+    },
+    "peek-catheter": {
+      "title": "Production, Applications and Development of PEEK Catheters in the Medical Field",
+      "paragraphs": [
+        "01",
+        "Localization of raw materials",
+        "Current status: PEEK raw materials previously relied on imports from Invibio (UK), Evonik (Germany) and Victrex (UK). Now Jilin University and Zhongyan already produce and sell in bulk, and Shandong Junhao has started construction in Shandong, with mass production expected in 2021.",
+        "02",
+        "Physical and chemical properties of PEEK",
+        "(1) A low elastic modulus close to that of bone (PEEK ~3.8 GPa, cancellous bone 3.2-7.8 GPa, cortical bone 17-20 GPa, titanium alloy TC4 ~110 GPa) prevents stress-shielding effects and helps surrounding bone maintain its original strength.",
+        "(2) X-ray transmissibility: PEEK does not show up on CT and MRI scans, making it easy to assess bone growth and healing; when visualization of the implant is needed in some cases, this can also be achieved through modification. In addition, PEEK has strong radiation resistance — with a very stable chemical structure, PEEK parts work normally even under high doses of ionizing radiation.",
+        "(3) Excellent sterilization performance: even with prolonged exposure to steam, ethylene oxide and gamma rays, its original properties remain unchanged. It can be used continuously at temperatures up to 250°C, with transient use up to 300°C.",
+        "(4) Good biocompatibility.",
+        "(5) Adjustable mechanical properties: different additives can be incorporated, including carbon fiber, barium sulfate and glass fiber, to meet specific application requirements.",
+        "(6) Greater design freedom: parts can be easily machined from semi-finished blanks or produced by injection molding; PEEK can be processed by injection molding, extrusion and 3D printing.",
+        "Current applications in orthopedic medical devices:",
+        "Sports medicine, joint fields, craniomaxillofacial surgery and interspinous devices.",
+        "Companies currently involved in this field, such as MDT, Depuy, Jiangsu Junhua and Smith & Nephew, are all engaged in R&D and production.",
+        "Injection molding and extrusion processes that meet biocompatibility requirements are a major direction."
+      ]
+    }
+  },
+  "hero": {
+    "scrollDown": "Scroll down"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for does not exist or has been removed.",
+    "backHome": "Back to Home"
+  }
+}
