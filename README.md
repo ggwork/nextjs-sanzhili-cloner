@@ -1,6 +1,6 @@
-## 邮箱
+## 项目介绍
 
-地址：sanzhili163@163.com
-密码：sAnzhili1638888
+复制 http://www.sanzhili-pm.com
 
-IMAP/SMTP授权码：QMW7YvnumHv4Cy6S
+## 使用技术
+nextjs

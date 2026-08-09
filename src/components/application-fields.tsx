@@ -25,8 +25,8 @@ import { cn } from "@/lib/utils";
 export function ApplicationFields() {
   const router = useRouter();
   const t = useTranslations();
-  
-  
+
+
 
   return (
     <section
@@ -84,7 +84,7 @@ export function ApplicationFields() {
                   <Link
                     href={f.href}
                     className={cn(
-                      "mx-auto flex h-[45px] w-[40%] items-center justify-center bg-brand text-[14px] text-white transition-colors duration-500 group-hover:bg-white group-hover:text-brand",
+                      "mx-auto flex h-[45px] w-[80%] items-center justify-center bg-brand text-[14px] text-white transition-colors duration-500 group-hover:bg-white group-hover:text-brand",
                     )}
                   >
                     {t("common.learnMore")}

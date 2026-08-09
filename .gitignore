@@ -52,6 +52,14 @@ temp/
 /.nextbuild/
 /docs/
 .env.production
-.env.production
-.env.production
 /.env.production
+.amazonq
+.augment
+.claude
+.codex
+.continue
+.cursor
+.gemini
+.github
+.opencode
+.windsurf

@@ -24,6 +24,7 @@ import type {
  */
 
 export const PHONE = process.env.NEXT_PUBLIC_CONTACT_PHONE ?? "";
+export const PHONE2 = process.env.NEXT_PUBLIC_CONTACT_PHONE2 ?? "";
 
 export const NAV_ITEMS: NavItem[] = [
   { label: "nav.home", href: "/" },
