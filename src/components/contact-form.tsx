@@ -20,12 +20,13 @@ export function ContactForm() {
     country: "",
     remarks: "",
   });
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const t = useTranslations();
 
   const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setForm((f) => ({ ...f, [k]: e.target.value }));
 
-  const onSubmit = (e: FormEvent) => {
+  const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
     const phoneOk = /^(13|15|18|17|19)\d{9}$/.test(form.phone);
     if (!form.name) return alert(t("contact.nameRequired"));
@@ -34,8 +35,20 @@ export function ContactForm() {
     if (!form.email) return alert(t("contact.emailRequired"));
     if (!form.country) return alert(t("contact.countryRequired"));
     if (!form.remarks) return alert(t("contact.remarksRequired"));
-    alert(t("contact.success"));
-    setForm({ name: "", phone: "", email: "", country: "", remarks: "" });
+
+    setStatus("sending");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("send_failed");
+      setStatus("success");
+      setForm({ name: "", phone: "", email: "", country: "", remarks: "" });
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -89,12 +102,20 @@ export function ContactForm() {
             />
             <button
               type="submit"
+              disabled={status === "sending"}
               className={cn(
                 "mt-5 block h-[50px] w-full border border-line bg-white text-[16px] text-[#797979]",
                 "transition-colors duration-500 hover:border-[#1a689a] hover:bg-[#1a689a] hover:text-white",
+                "disabled:cursor-not-allowed disabled:opacity-60",
               )}
             >
-              {t("contact.submit")}
+              {status === "sending"
+                ? t("contact.sending")
+                : status === "success"
+                  ? t("contact.success")
+                  : status === "error"
+                    ? t("contact.error")
+                    : t("contact.submit")}
             </button>
           </form>
         </div>

@@ -21,6 +21,7 @@ const STATIC_ROUTES = [
   "/news",
   "/news/industry",
   "/contact",
+  "/message",
 ];
 
 /** Dynamic route slugs extracted from data. */

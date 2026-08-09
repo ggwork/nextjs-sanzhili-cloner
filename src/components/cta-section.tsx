@@ -21,12 +21,12 @@ export function CtaSection() {
         <h2 className="text-ink" style={{ fontSize: 30 }}>
           {t("cta.title")}
         </h2>
-        <p className="mx-auto mt-2.5 mb-[30px] text-body" style={{ fontSize: 14 }}>
+        <p className="mx-auto mt-2.5 mb-[30px] text-body text-center" style={{ fontSize: 14 }}>
           {t("cta.body")}
         </p>
 
         <Link
-          href="#contact"
+          href="/contact"
           className={cn(
             "group relative inline-block h-[45px] w-[160px] bg-brand text-[14px] leading-[45px] text-white",
             "max-[1400px]:w-[180px] max-[1200px]:w-[200px]",
@@ -37,15 +37,18 @@ export function CtaSection() {
             <MoreArrow />
           </span>
 
+          <span className="relative inline h-5 w-[80px] align-middle whitespace-nowrap transition-all duration-500 group-hover:ml-[30px]">
+            {t("cta.buttonDefault")}
+          </span>
           {/* label: current-locale (default) → other-locale (hover) */}
-          <span className="relative inline-block h-5 w-[80px] align-middle whitespace-nowrap transition-all duration-500 group-hover:ml-[30px]">
+          {/* <span className="relative inline-block h-5 w-[80px] align-middle whitespace-nowrap transition-all duration-500 group-hover:ml-[30px]">
             <span className="absolute bottom-0 left-1/2 block h-full -translate-x-1/2 bg-brand transition-opacity duration-500 group-hover:opacity-0">
               {t("cta.buttonDefault")}
             </span>
             <span className="absolute bottom-0 left-1/2 block h-0 -translate-x-1/2 overflow-hidden bg-brand opacity-0 transition-all duration-500 group-hover:h-full group-hover:opacity-100">
               {t("cta.buttonHover")}
             </span>
-          </span>
+          </span> */}
 
           {/* right arrow: visible by default, flies out on hover */}
           <span className="absolute right-0 top-1/2 block mr-[20px] -translate-y-1/2 transition-all duration-500 group-hover:mr-0 group-hover:translate-x-[150%]">

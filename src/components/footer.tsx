@@ -22,7 +22,7 @@ export function Footer() {
     <footer className="bg-footer-bg text-white">
       <div className="container-content">
         {/* Top: nav links + friendly-links dropdown */}
-        <div className="flex flex-wrap items-center justify-between gap-y-6 border-b border-footer-border py-20">
+        <div className="flex flex-wrap items-center justify-between gap-y-6 border-b border-footer-border py-12">
           <ul className="flex w-full max-w-[66%] flex-wrap items-center gap-x-3 leading-[50px] md:w-[66%]">
             {NAV_ITEMS.map((item, i) => (
               <li key={item.label} className="flex items-center gap-x-3">
@@ -86,9 +86,15 @@ export function Footer() {
         {/* Bot: contact info */}
         <div className="border-b border-footer-border py-8">
           <div className="mt-[15px] space-y-2">
-            {[FOOTER.address, FOOTER.phone, FOOTER.email].map((key) => (
+            {(
+              [
+                { key: FOOTER.address, values: {} },
+                { key: FOOTER.phone, values: { phone: process.env.NEXT_PUBLIC_CONTACT_PHONE ?? "" } },
+                { key: FOOTER.email, values: { email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "" } },
+              ] as { key: string; values: Record<string, string> }[]
+            ).map(({ key, values }) => (
               <p key={key} className="text-[16px] text-white opacity-50">
-                {t(key)}
+                {t(key, values)}
               </p>
             ))}
           </div>

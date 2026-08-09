@@ -83,34 +83,81 @@
     }
   ],
   "products": [
-    { "title": "PEEK Raw Resin" },
-    { "title": "Glass Fiber Reinforced Resin" },
-    { "title": "Carbon Fiber Reinforced" }
+    {
+      "title": "PEEK Raw Resin"
+    },
+    {
+      "title": "Glass Fiber Reinforced Resin"
+    },
+    {
+      "title": "Carbon Fiber Reinforced"
+    }
   ],
   "productList": [
-    { "title": "PEEK Raw Resin" },
-    { "title": "Glass Fiber Reinforced Resin" },
-    { "title": "Carbon Fiber Reinforced" },
-    { "title": "High Impact ABS" }
+    {
+      "title": "PEEK Raw Resin"
+    },
+    {
+      "title": "Glass Fiber Reinforced Resin"
+    },
+    {
+      "title": "Carbon Fiber Reinforced"
+    },
+    {
+      "title": "PEEK Profiles"
+    },
+    {
+      "title": "PEEK injection-molded parts"
+    },
+    {
+      "title": "Precision-machined PEEK parts"
+    }
   ],
   "newsColumns": [
     {
       "heading": "Company News",
       "items": [
-        { "title": "PEEK Compressor Piston Rings", "date": "2022-06-15" },
-        { "title": "PEEK Compressor Valve Plates", "date": "2022-06-15" },
-        { "title": "Production, Applications and Development of PEEK Catheters in the Medical Field", "date": "2022-06-15" },
-        { "title": "New Polymer Material in Daily Life — PEEK", "date": "2022-06-15" },
-        { "title": "Principle and Process of Electrostatic Powder Coating", "date": "2022-06-15" },
-        { "title": "What Harm Does Static Electricity Cause to Sensitive Components?", "date": "2022-06-15" }
+        {
+          "title": "PEEK Compressor Piston Rings",
+          "date": "2022-06-15"
+        },
+        {
+          "title": "PEEK Compressor Valve Plates",
+          "date": "2022-06-15"
+        },
+        {
+          "title": "Production, Applications and Development of PEEK Catheters in the Medical Field",
+          "date": "2022-06-15"
+        },
+        {
+          "title": "New Polymer Material in Daily Life — PEEK",
+          "date": "2022-06-15"
+        },
+        {
+          "title": "Principle and Process of Electrostatic Powder Coating",
+          "date": "2022-06-15"
+        },
+        {
+          "title": "What Harm Does Static Electricity Cause to Sensitive Components?",
+          "date": "2022-06-15"
+        }
       ]
     },
     {
       "heading": "Industry News",
       "items": [
-        { "title": "Superior Performance and Development Status of PEEK Special Engineering Plastics", "date": "2022-06-15" },
-        { "title": "New Investment Direction in Engineering Plastics — PEEK", "date": "2022-06-15" },
-        { "title": "PEEK Successfully Applied in Medium-Pressure Constant-Flow Pumps", "date": "2022-06-15" }
+        {
+          "title": "Superior Performance and Development Status of PEEK Special Engineering Plastics",
+          "date": "2022-06-15"
+        },
+        {
+          "title": "New Investment Direction in Engineering Plastics — PEEK",
+          "date": "2022-06-15"
+        },
+        {
+          "title": "PEEK Successfully Applied in Medium-Pressure Constant-Flow Pumps",
+          "date": "2022-06-15"
+        }
       ]
     }
   ],
@@ -132,14 +179,25 @@
   "footer": {
     "friendLinks": "Friendly Links",
     "address": "Address: No.8 Weiye Road, Kunshan Development Zone, Suzhou, Jiangsu",
-    "phone": "Tel: 185 5125 1523",
-    "email": "Email: szl0617@sanzhili-pm.com",
+    "phone": "Tel: {phone}",
+    "email": "Email: {email}",
     "copyrightOwner": "Suzhou Sanzhili Polymer Materials Co., Ltd.",
     "icp": "Su ICP No. 2022026799-1",
     "siteMap": "Sitemap",
     "icpLabel": "ICP:",
     "webCredit": "Website by Tengyun (technical services only)",
-    "friendLinkLabels": ["Tengyun Website Builder", "Baidu", "Baidu"]
+    "friendLinkLabels": [
+      "Tengyun Website Builder",
+      "Baidu",
+      "Baidu"
+    ]
+  },
+  "contactInfo": {
+    "title": "Contact Us",
+    "addressLabel": "Address",
+    "addressValue": "No.8 Weiye Road, Kunshan Development Zone, Suzhou, Jiangsu",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email"
   },
   "contact": {
     "title": "Contact us for product requirements",
@@ -156,7 +214,28 @@
     "emailRequired": "Please enter your email",
     "countryRequired": "Please enter your country",
     "remarksRequired": "Please enter your remarks",
-    "success": "Submitted successfully"
+    "success": "Submitted successfully",
+    "sending": "Sending...",
+    "error": "Submission failed, please try again later"
+  },
+  "message": {
+    "title": "If you have any questions or requirements, please leave us a message",
+    "imageAlt": "Guestbook",
+    "name": "Name",
+    "phone": "Phone (required)",
+    "email": "Email",
+    "country": "Country",
+    "message": "Your Message",
+    "submit": "Submit Message",
+    "sending": "Sending...",
+    "success": "Submitted successfully",
+    "error": "Submission failed, please try again later",
+    "nameRequired": "Please enter your name",
+    "phoneRequired": "Please enter your phone number",
+    "phoneInvalid": "The phone number format is incorrect",
+    "emailRequired": "Please enter your email",
+    "countryRequired": "Please enter your country",
+    "messageRequired": "Please enter your message"
   },
   "floating": {
     "emailConsult": "Email Us",
@@ -171,7 +250,11 @@
     "casesEn": "",
     "casesCn": "Product Cases",
     "newsEn": "News",
-    "newsCn": "News Center"
+    "newsCn": "News Center",
+    "contactEn": "Contact Us",
+    "contactCn": "联系我们",
+    "messageEn": "Guestbook",
+    "messageCn": "客户留言"
   },
   "pageTitles": {
     "about": "Company Profile",
@@ -180,7 +263,9 @@
     "products": "PEEK Resin",
     "cases": "PEEK Product Cases",
     "news": "Company News",
-    "industryNews": "Industry News"
+    "industryNews": "Industry News",
+    "contact": "Contact Us",
+    "message": "Guestbook"
   },
   "philosophyPoints": [
     "Continuously innovate and improve the business operation model;",
@@ -188,22 +273,55 @@
     "Seek win-win partnerships;",
     "Implement a full-process risk management mechanism."
   ],
-  "missionPoints": ["Heaven rewards the diligent — live up to your youth"],
+  "missionPoints": [
+    "Heaven rewards the diligent — live up to your youth"
+  ],
   "details": {
     "products": {
-      "peek-resin": { "title": "PEEK Raw Resin" },
-      "glass-fiber": { "title": "Glass Fiber Reinforced Resin" },
-      "carbon-fiber": { "title": "Carbon Fiber Reinforced" },
-      "abs": { "title": "High Impact ABS" }
+      "peek-resin": {
+        "title": "PEEK Raw Resin"
+      },
+      "glass-fiber": {
+        "title": "Glass Fiber Reinforced Resin"
+      },
+      "carbon-fiber": {
+        "title": "Carbon Fiber Reinforced"
+      },
+      "peek-xingcai": {
+        "title": "PEEK Profiles"
+      },
+      "peek-zhusujian": {
+        "title": "PEEK Injection-Molded Parts"
+      },
+      "jingmijiagongjian": {
+        "title": "Precision-Machined PEEK Parts"
+      },
+      "abs": {
+        "title": "High Impact ABS"
+      }
     },
     "cases": {
-      "abs-luggage": { "title": "ABS Luggage" },
-      "abs-helmet": { "title": "ABS Safety Helmet" },
-      "peek-product-1": { "title": "PEEK Products" },
-      "peek-product-2": { "title": "PEEK Products" },
-      "peek-product-3": { "title": "PEEK Products" },
-      "peek-product-4": { "title": "PEEK Products" },
-      "peek-tube": { "title": "PEEK Tubing" }
+      "abs-luggage": {
+        "title": "ABS Luggage"
+      },
+      "abs-helmet": {
+        "title": "ABS Safety Helmet"
+      },
+      "peek-product-1": {
+        "title": "PEEK Products"
+      },
+      "peek-product-2": {
+        "title": "PEEK Products"
+      },
+      "peek-product-3": {
+        "title": "PEEK Products"
+      },
+      "peek-product-4": {
+        "title": "PEEK Products"
+      },
+      "peek-tube": {
+        "title": "PEEK Tubing"
+      }
     }
   },
   "articles": {
@@ -248,6 +366,58 @@
         "Sports medicine, joint fields, craniomaxillofacial surgery and interspinous devices.",
         "Companies currently involved in this field, such as MDT, Depuy, Jiangsu Junhua and Smith & Nephew, are all engaged in R&D and production.",
         "Injection molding and extrusion processes that meet biocompatibility requirements are a major direction."
+      ]
+    },
+    "peek-specialty-plastics": {
+      "title": "Superior Properties and Development Status of PEEK Specialty Engineering Plastics",
+      "paragraphs": [
+        "I. Outstanding Properties of PEEK Resin",
+        "PEEK (polyetheretherketone) resin is a specialty engineering plastic with excellent properties such as high temperature resistance, self-lubrication, easy processing and high mechanical strength. Compared with other specialty engineering plastics, PEEK resin has the following 13 significant characteristics:",
+        "1. High temperature resistance. PEEK resin has a high glass transition temperature (143°C) and melting point (334°C), which is one of the reasons it can be reliably used in heat-resistant applications. Its load deflection temperature reaches 316°C (30% GF or CF reinforced grades), with a continuous use temperature of 260°C.",
+        "2. Mechanical properties. PEEK resin is a plastic with a balanced combination of toughness and rigidity. Its excellent fatigue resistance under alternating stress is the most outstanding among all plastics, comparable to alloy materials.",
+        "3. Self-lubrication (corrosion resistance). PEEK resin has outstanding sliding characteristics among all plastics, suitable for applications requiring low friction coefficient and wear resistance. Sliding grades modified with 10% each of carbon fiber, graphite and PTFE, or 30% CF reinforced grades, are grades with excellent sliding characteristics.",
+        "4. Chemical resistance. PEEK resin has excellent chemical resistance. Among common chemicals, only concentrated sulfuric acid can dissolve or destroy it. Its corrosion resistance is similar to that of nickel steel.",
+        "5. Flame retardancy. PEEK resin is a very stable polymer. A 1.45mm thick sample can achieve excellent flame retardancy standards without any flame retardants.",
+        "6. Peel resistance. PEEK resin has good peel resistance, allowing it to be made into thin-coated wires or magnet wires for use under harsh conditions.",
+        "7. Fatigue resistance. PEEK resin has excellent fatigue resistance among all resins.",
+        "8. Radiation resistance. It has strong gamma radiation resistance, exceeding that of polystyrene, which has excellent radiation resistance among general-purpose resins. It can be made into high-performance wires that maintain good insulation capability at gamma radiation doses up to 1100 Mrad.",
+        "9. Hydrolysis resistance. PEEK resin and its composites are not chemically affected by water and high-pressure steam. Products made from this material can maintain excellent properties even under continuous use in high-temperature, high-pressure water.",
+        "10. Easy processability. Although PEEK resin is a super heat-resistant resin, it has good high-temperature fluidity and high thermal decomposition temperature, allowing it to be processed by: 1. injection molding, 2. extrusion molding, 3. compression molding, 4. blow molding, 5. melt spinning, 6. rotational molding, 7. powder coating.",
+        "11. Insulation stability. PEEK has good electrical insulation properties maintained over a wide temperature range. Its dielectric loss is also very small under high-frequency conditions.",
+        "12. Wear resistance. It has good wear resistance comparable to polyimide. The wear amount of pure PEEK resin against H10 wheel material is 2.7x10^-4 g, and against S17 wheel material is 9.7x10^-4 g.",
+        "II. Production Progress of PEEK Resin in China",
+        "PEEK resin was developed by British ICI company in the late 1960s. It has a long history of application abroad. Since its development, PEEK resin has been regarded as an important strategic national defense material, with export restrictions imposed by many countries.",
+        "During this period, Chinese research institutions could only import small quantities after going through strict import application procedures. With the widespread application of PEEK resin in civilian fields such as automotive, electronics and machinery, export restrictions gradually relaxed. China's research and development of PEEK resin has been ongoing for nearly 20 years, with breakthrough progress in synthesis technology. To meet the needs of national defense development and civilian demand, PEEK resin research was included in the 'Seventh Five-Year Plan' national science and technology key projects and the '863' Program, undertaken by Jilin University.",
+        "During the 'Seventh Five-Year Plan' period, Jilin University completed laboratory-scale testing of PEEK resin, developing a synthesis route with independent intellectual property rights using entirely domestically sourced raw materials. On this basis, during the 'Eighth Five-Year Plan' period, the scale was expanded to 10 tons/year, achieving small-batch production to meet urgent domestic military and civilian needs.",
+        "Considering the need for industrialization of PEEK resin, during the 'Ninth Five-Year Plan' period, Jilin University conducted a 30 tons/year pilot scale test, which passed appraisal and acceptance at the end of the 'Ninth Five-Year Plan'. Product testing showed that the main properties of the resin reached the level of similar foreign products, with all raw materials and equipment sourced domestically, reducing production costs and enabling the domestic PEEK resin market price to be significantly lower than international market prices.",
+        "By the end of 2001, a 300 tons/year PEEK resin production workshop invested with 100 million yuan by Changchun Jida High-Tech Materials Co., Ltd. was completed and put into production. The second phase 500 tons/year PEEK resin project was approved by the State Planning Commission as a 'Tenth Five-Year Plan' industrialization demonstration project in August 2001, currently under implementation and expected to be completed and put into production by the end of 2002. By then, Changchun Jida High-Tech Materials Co., Ltd. will become the second company after VICTREX PLC to commercially produce PEEK resin using domestic patented technology, and China's industrialization of PEEK resin is just around the corner.",
+        "III. Wide Applications of PEEK Resin",
+        "PEEK resin is widely used in aerospace, automotive manufacturing, electronics and electrical, medical and food processing fields.",
+        "1. Aerospace field -- PEEK resin was first applied in the aerospace field. Due to its excellent and special properties, it was initially used as a military material in aerospace before gradually entering civilian fields. PEEK resin can replace aluminum and other metal materials to manufacture various aircraft components. With low density and good processability, it can be directly processed into fine, large parts. PEEK resin also has good rain erosion resistance and can be used for aircraft exterior parts. With excellent flame retardancy and low smoke and toxic gas emissions during combustion, it is commonly used for aircraft interior components, reducing fire hazards.",
+        "2. Automotive manufacturing -- PEEK resin has been successfully used in automotive manufacturing for a long time. Volkswagen, Nissan, General Motors, Chrysler and other world-renowned automakers are all customers of VICTREX PLC. PEEK resin has good friction and mechanical properties, and can replace metals as raw material for engine covers. Bearings, gaskets, seals, clutch gear rings and other components made from PEEK resin are widely used in automotive transmission, brake and air conditioning systems.",
+        "3. Electronic information industry -- PEEK resin has excellent electrical properties and is an ideal electrical insulator. Under harsh conditions such as high temperature, high pressure and high humidity, PEEK resin's insulation remains effective. These characteristics have made the electronic information field a major application area for PEEK resin. PEEK resin has high purity and stable mechanical and chemical properties, reducing contamination during silicon wafer processing. Due to its high purity, pipes, valves and pumps made of PEEK resin for transporting ultra-pure water prevent contamination. PEEK resin does not deform over a wide temperature range, and components can withstand high-temperature soldering. In the semiconductor industry, PEEK resin is commonly used to manufacture wafer carriers, electronic insulation films and various connectors.",
+        "4. Industrial field -- PEEK resin has good mechanical properties, chemical corrosion resistance and high temperature resistance, withstanding pressures up to 25,000 Pa and temperatures of 260C. As a semi-crystalline engineering plastic, PEEK is insoluble in all solvents except concentrated sulfuric acid. In the chemical and other processing industries, PEEK resin is commonly used for compressor valve plates, piston rings, seals and various chemical pump bodies and valve parts. Using this material instead of stainless steel for vortex pump impellers can significantly reduce wear and noise levels with longer service life. Additionally, since PEEK resin meets the specifications for casing component materials and can be bonded with various adhesives at high temperatures, modern connectors are another potential application market.",
+        "5. Medical field -- PEEK resin can withstand up to 3,000 cycles of high-pressure sterilization at 134C, making it suitable for surgical and dental equipment requiring high sterilization standards and repeated use. PEEK resin exhibits high mechanical strength, good stress resistance and hydrolytic stability under hot water, steam, solvent and chemical reagent conditions, making it suitable for various medical devices requiring high-temperature steam sterilization. PEEK resin is not only lightweight, non-toxic and corrosion-resistant, but is also the material closest to human bone, capable of organic integration with tissues, making it an important application for replacing metals in manufacturing human bone implants.",
+        "With the development of science and technology, many new technologies have been applied in automotive manufacturing, chemical industry and electronic information industry, placing higher demands on PEEK resin materials.",
+        "In recent years, following the engineering trend of general-purpose plastics and the development of expanding polymer material applications, product requirements are moving toward higher, newer and more practical directions. Material modification technologies using filling, blending, crystallization, cross-linking and grafting have attracted worldwide attention. Industrialized countries all place great importance on the research and development of new materials. Composite materials are a key focus of new material development, as they can leverage the strengths of each material while compensating for weaknesses, achieving improved comprehensive performance and versatility through the combination of different materials. Composite materials can possess comprehensive properties that single materials cannot, earning them the title of 'the most promising material of the 21st century' in the high-tech products field.",
+        "To meet the requirements for manufacturing high-precision, heat-resistant, wear-resistant, fatigue-resistant and impact-resistant components, PEEK can be enhanced through blending, filling and fiber composite modification to obtain PEEK plastic alloys or PEEK composites with even better performance. For example: (1) Blending PEEK with polyether ether ketone yields composites with specific melting points and glass transition temperatures, improving processability; (2) PEEK blended with polysulfone produces composites with good mechanical properties and improved flame retardancy; (3) Adding specialized phenolic resin to PEEK produces materials with special friction-resistant properties; (4) PEEK blended with PTFE produces composites that maintain PEEK's high strength and hardness while also having outstanding wear resistance, suitable for sliding bearings, dynamic seal rings and other mechanical components; (5) PEEK can be reinforced with carbon fiber, glass fiber and other fibers to produce high-performance composites with excellent creep resistance, moisture and heat resistance, aging resistance and impact resistance, significantly improving tensile and flexural strength; (6) Adding whisker materials to PEEK improves hardness, rigidity and dimensional stability, used for manufacturing ring, mesh and button valve plates for hydrogen compressors and petroleum gas compressors on large petrochemical production lines. PEEK composites enhanced with inorganic nano-materials are new composite materials that combine the high performance of organic resins with the many properties of inorganic nanoparticles."
+      ]
+    },
+    "peek-investment-direction": {
+      "title": "A New Investment Direction in Engineering Plastics -- PEEK",
+      "paragraphs": [
+        "Under increasingly severe resource and environmental constraints and the rapid development of new industrial demands, specialty engineering plastics such as PEEK have been widely used in aerospace, national defense, electronic semiconductors, medical devices, transportation and many other fields in recent years. As a strategic high-end material, its development not only supports national pillar industries and modern high-tech industries, but also promotes the transformation of traditional industries and the adjustment of product structures.",
+        "With the continuous innovation and development of specialty engineering plastics such as PEEK, their varieties are increasing and performance is improving. Resins such as PEEK (polyetheretherketone), PI (polyimide) and PPS (polyphenylene sulfide) have all achieved industrialization, and the gap with foreign countries in raw material synthesis, production scale and performance is narrowing. All of this is inseparable from the government's attention to and strong support for specialty engineering plastics. From the 'Seventh Five-Year Plan' to the 'Thirteenth Five-Year Plan,' PEEK and other specialty engineering plastics have always been a focus of national attention. The rapid development of China's specialty engineering plastics industry is inseparable from policy guidance and government support, as can be seen from the recently introduced policies encouraging the development of the PEEK and other specialty engineering plastics industries.",
+        "1) The National Development and Reform Commission and the Ministry of Commerce issued the 'Catalogue of Encouraged Industries for Foreign Investment (2019 Edition),' which highlights chemical raw materials and chemical products manufacturing including: PEEK (polyetheretherketone), PI (polyimide), differentiated and functional polyester (PET), polyoxymethylene, polyphenylene sulfide; polysulfone, polyethersulfone, polyarylate (PAR), polyphenylene oxide and other specialty engineering plastics.",
+        "2) The NDRC's 'Three-Year Action Plan for Enhancing the Core Competitiveness of Manufacturing Industry (2018-2020)' includes key chemical new material technology industrialization projects: aromatic ketone polymers: PEEK (polyetheretherketone), polyether ketone, polyether ketone ketone; polyether ether nitrile, polyphenylene sulfide; polyphenylene oxide, etc."
+      ]
+    },
+    "peek-constant-flow-pump": {
+      "title": "PEEK Successfully Applied to Medium-Pressure Constant Flow Pump",
+      "paragraphs": [
+        "New successful application case of PEEK:",
+        "A medium-pressure constant flow pump has been successfully developed with pump head and flow path materials made of PEEK (polyetheretherketone) resin.",
+        "The TBP-k series constant flow pump (PEEK pump, plunger pump, corrosion-resistant pump, medium-pressure pump, transfer pump) uses PEEK resin, a specialty engineering plastic with excellent performance. PEEK is insoluble in almost all solvents except concentrated sulfuric acid. The TBP-k series constant flow pump can be widely used in chemical, petrochemical, coal, dye, fine chemical, scientific research, environmental protection, pesticide, pharmaceutical, food and other industries, meeting the requirements of constant-pressure and constant-flow precise transfer of acid and alkali corrosive liquids in these industries."
       ]
     }
   },

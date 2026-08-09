@@ -23,7 +23,7 @@ import type {
  * slug, date, phone) stay here since they are language-independent.
  */
 
-export const PHONE = "185 5125 1523";
+export const PHONE = process.env.NEXT_PUBLIC_CONTACT_PHONE ?? "";
 
 export const NAV_ITEMS: NavItem[] = [
   { label: "nav.home", href: "/" },
@@ -42,7 +42,7 @@ export const NAV_ITEMS: NavItem[] = [
     children: [{ label: "nav.rawResin", href: "/products" }],
   },
   { label: "nav.cases", href: "/cases" },
-  { label: "nav.guestbook", href: "/contact" },
+  { label: "nav.guestbook", href: "/message" },
   {
     label: "nav.news",
     href: "/news",
@@ -130,9 +130,9 @@ export const NEWS_COLUMNS: NewsColumn[] = [
     heading: "newsColumns.1.heading",
     moreHref: "/news/industry",
     items: [
-      { title: "newsColumns.1.item0", date: NEWS_DATE, href: "/news/industry" },
-      { title: "newsColumns.1.item1", date: NEWS_DATE, href: "/news/industry" },
-      { title: "newsColumns.1.item2", date: NEWS_DATE, href: "/news/industry" },
+      { title: "articles.peek-specialty-plastics.title", date: NEWS_DATE, href: "/news/peek-specialty-plastics" },
+      { title: "articles.peek-investment-direction.title", date: NEWS_DATE, href: "/news/peek-investment-direction" },
+      { title: "articles.peek-constant-flow-pump.title", date: NEWS_DATE, href: "/news/peek-constant-flow-pump" },
     ],
   },
 ];
@@ -210,7 +210,10 @@ export const PRODUCT_LIST: Product[] = [
   { title: "productList.0.title", image: "/images/product-peek-resin.jpg", href: "/products/peek-resin", slug: "peek-resin" },
   { title: "productList.1.title", image: "/images/product-glassfiber.jpg", href: "/products/glass-fiber", slug: "glass-fiber" },
   { title: "productList.2.title", image: "/images/product-carbonfiber.jpg", href: "/products/carbon-fiber", slug: "carbon-fiber" },
-  { title: "productList.3.title", image: "/images/product-abs.jpg", href: "/products/abs", slug: "abs" },
+  { title: "productList.3.title", image: "/images/peek-xingcai.jpg", href: "/products/peek-xingcai", slug: "peek-xingcai" },
+  { title: "productList.4.title", image: "/images/peek-zhusujian.png", href: "/products/peek-zhusujian", slug: "peek-zhusujian" },
+  { title: "productList.5.title", image: "/images/peek-jingmijiagongjian.png", href: "/products/jingmijiagongjian", slug: "jingmijiagongjian" },
+  // { title: "productList.3.title", image: "/images/product-abs.jpg", href: "/products/abs", slug: "abs" },
 ];
 
 /** 产品中心 detail pages (source NewsDetail.aspx image gallery). */
@@ -243,10 +246,22 @@ export const PRODUCT_DETAILS: ProductDetail[] = [
     ],
   },
   {
-    slug: "abs",
-    title: "details.products.abs.title",
-    date: "2022-09-14",
-    images: [],
+    slug: "peek-xingcai",
+    title: "details.products.peek-xingcai.title",
+    date: "2022-06-28",
+    images: ["/images/peek-xingcai.jpg"],
+  },
+  {
+    slug: "peek-zhusujian",
+    title: "details.products.peek-zhusujian.title",
+    date: "2022-06-28",
+    images: ["/images/peek-zhusujian.png"],
+  },
+  {
+    slug: "jingmijiagongjian",
+    title: "details.products.jingmijiagongjian.title",
+    date: "2022-06-28",
+    images: ["/images/peek-jingmijiagongjian.png"],
   },
 ];
 
@@ -269,8 +284,8 @@ export const CASE_LIST: Product[] = [
 
 /** 产品案例 detail pages (source NewsDetail.aspx image gallery). */
 export const CASE_DETAILS: ProductDetail[] = [
-  { slug: "abs-luggage", title: "details.cases.abs-luggage.title", date: "2022-09-14", images: [] },
-  { slug: "abs-helmet", title: "details.cases.abs-helmet.title", date: "2022-09-14", images: [] },
+  { slug: "abs-luggage", title: "details.cases.abs-luggage.title", date: "2022-09-14", images: ["/images/case-abs-luggage.jpg"] },
+  { slug: "abs-helmet", title: "details.cases.abs-helmet.title", date: "2022-09-14", images: ["/images/case-abs-helmet.jpg"] },
   {
     slug: "peek-product-1",
     title: "details.cases.peek-product-1.title",
@@ -307,6 +322,20 @@ export const CASE_DETAILS: ProductDetail[] = [
   },
 ];
 
+/** ---- 联系我们 inner page (Contact.aspx?ClassID=40) ---- */
+export const CONTACT_BANNER: SubBanner = {
+  image: "/images/about-banner.jpg",
+  en: "banners.contactEn",
+  cn: "banners.contactCn",
+};
+
+/** ---- 客户留言 inner page (Message.aspx?ClassID=62) ---- */
+export const MESSAGE_BANNER: SubBanner = {
+  image: "/images/about-banner.jpg",
+  en: "banners.messageEn",
+  cn: "banners.messageCn",
+};
+
 /** ---- 新闻中心 inner page (News.aspx?ClassID=6 / 38) ---- */
 export const NEWS_BANNER: SubBanner = {
   image: "/images/about-banner.jpg",
@@ -329,4 +358,7 @@ export const NEWS_ARTICLES: NewsArticle[] = [
   { slug: "peek-piston-ring", title: "articles.peek-piston-ring.title", date: "2022-06-15" },
   { slug: "peek-valve-plate", title: "articles.peek-valve-plate.title", date: "2022-06-15" },
   { slug: "peek-catheter", title: "articles.peek-catheter.title", date: "2022-06-15" },
+  { slug: "peek-specialty-plastics", title: "articles.peek-specialty-plastics.title", date: "2022-06-15" },
+  { slug: "peek-investment-direction", title: "articles.peek-investment-direction.title", date: "2022-06-15" },
+  { slug: "peek-constant-flow-pump", title: "articles.peek-constant-flow-pump.title", date: "2022-06-15" },
 ];
