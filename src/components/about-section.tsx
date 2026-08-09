@@ -43,7 +43,7 @@ export function AboutSection() {
             >
               {t("about.text")}
             </p>
-            <Reveal variant="fade-right" className="mt-5">
+            <Reveal variant="fade-right" className="mt-5 text-center md:text-left">
               <MoreButton href="/about">{t("common.learnMore")}</MoreButton>
             </Reveal>
           </Reveal>

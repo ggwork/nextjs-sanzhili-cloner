@@ -14,18 +14,18 @@ export function LanguageSwitcher({ className }: { className?: string }) {
   const pathname = usePathname();
   const t = useTranslations("header");
 
-  const base = cn("px-1 text-[14px] transition-colors hover:text-brand", className);
+  const linkBase = "px-1 text-[14px] transition-colors hover:text-brand";
 
   return (
     <div
-      className="flex shrink-0 items-center gap-[6px] text-[14px]"
+      className={cn("flex shrink-0 items-center gap-[6px] text-[14px]", className)}
       aria-label={t("languageSwitchAria")}
     >
       <Link
         href={pathname}
         locale="zh"
         className={cn(
-          base,
+          linkBase,
           locale === "zh" ? "font-medium text-brand" : "text-body",
         )}
       >
@@ -36,7 +36,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
         href={pathname}
         locale="en"
         className={cn(
-          base,
+          linkBase,
           locale === "en" ? "font-medium text-brand" : "text-body",
         )}
       >

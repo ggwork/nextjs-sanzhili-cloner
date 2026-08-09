@@ -24,7 +24,7 @@ export function HeroBanner() {
   };
 
   return (
-    <section className="welban relative h-screen w-full overflow-hidden">
+    <section className="welban relative h-[400px] md:h-[800px] w-full overflow-hidden">
       <Swiper
         modules={[Autoplay, Pagination]}
         loop

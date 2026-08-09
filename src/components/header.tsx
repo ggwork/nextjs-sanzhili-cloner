@@ -37,7 +37,7 @@ export function Header({ activeIndex = 0 }: { activeIndex?: number }) {
         "max-[1499px]:bg-white",
       )}
     >
-      <div className="container-inner flex h-[100px] items-center justify-start max-[1440px]:w-[93.75%]">
+      <div className="container-inner flex h-[100px] items-center justify-between md:justify-start max-[1440px]:w-[93.75%]">
         {/* Logo */}
         <Link
           href="/"
@@ -92,8 +92,8 @@ export function Header({ activeIndex = 0 }: { activeIndex?: number }) {
         </nav>
 
         {/* Language switcher + Phone (desktop) */}
-        <div className="hidden shrink-0 items-center gap-[14px] text-[18px] font-medium md:flex">
-          <LanguageSwitcher />
+        <div className="flex shrink-0 items-center gap-[14px] text-[18px] font-medium">
+          <LanguageSwitcher className="hidden md:block" />
           <div className="flex items-center gap-[8px]">
             <Image
               src="/images/h-phone.png"
@@ -135,8 +135,8 @@ export function Header({ activeIndex = 0 }: { activeIndex?: number }) {
       {/* Mobile menu panel */}
       <div
         className={cn(
-          "max-h-0 overflow-hidden bg-white transition-[max-height] duration-500 md:hidden",
-          open ? "max-h-[600px]" : "max-h-0",
+          "max-h-0 overflow-hidden bg-white transition-[max-height] duration-500 md:hidden px-4",
+          open ? "max-h-[1000px]" : "max-h-0",
         )}
       >
         <ul className="container-inner flex flex-col py-2">
@@ -167,7 +167,9 @@ export function Header({ activeIndex = 0 }: { activeIndex?: number }) {
           ))}
           <li className="flex items-center justify-between py-3">
             <span className="text-[18px] font-medium text-brand">{PHONE}</span>
-            <LanguageSwitcher />
+          </li>
+          <li className="flex items-center justify-between py-3">
+            <LanguageSwitcher className="block" />
           </li>
         </ul>
       </div>
