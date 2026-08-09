@@ -42,7 +42,7 @@ export function Header({ activeIndex = 0 }: { activeIndex?: number }) {
         <Link
           href="/"
           aria-label={t("header.logoAlt")}
-          className="relative block h-[68px] w-[200px] shrink-0  max-[1280px]:h-[40px] max-[1280px]:w-[178px]"
+          className="relative block h-[68px] w-[186px] shrink-0 ml-8  max-[1280px]:h-[40px] max-[1280px]:w-[186px]"
         >
           <Image
             src="/images/logo.png"
@@ -54,14 +54,14 @@ export function Header({ activeIndex = 0 }: { activeIndex?: number }) {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden flex-1 justify-center shrink-0 overflow-y-visible md:flex">
+        <nav className="hidden flex-1 justify-center overflow-y-visible md:flex ">
           <ul className="flex">
             {NAV_ITEMS.map((item, i) => (
               <li key={item.label} className="group relative">
                 <Link
                   href={item.href}
                   className={cn(
-                    "relative inline-block px-[16px] text-[18px] leading-[100px] text-black transition-colors hover:text-brand",
+                    "relative inline-block px-[16px] text-[18px] leading-[100px] text-black transition-colors hover:text-brand whitespace-nowrap keep-all",
                     i === activeIndex && "text-brand",
                   )}
                 >
