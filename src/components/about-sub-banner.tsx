@@ -16,15 +16,14 @@ import type { SubBanner } from "@/types";
  *
  * Reusable across every inner page — only the photo + EN/CN title differ, so
  * they're passed as props (e.g. `<AboutSubBanner {...ABOUT_BANNER} />`). The
- * `en`/`cn` fields are i18n message keys; the current locale renders its own
- * language as the large title and the other language as the small subtitle.
+ * `en`/`cn` fields are i18n message keys; only the current locale's language
+ * is rendered: `/zh` shows Chinese only, `/en` shows English only.
  */
 export function AboutSubBanner({ image, en, cn }: SubBanner) {
   const locale = useLocale();
   const t = useTranslations();
 
-  const big = locale === "zh" ? t(cn) : t(en);
-  const small = locale === "zh" ? t(en) : t(cn);
+  const title = locale === "zh" ? t(cn) : t(en);
 
   return (
     <section className="relative w-full">
@@ -34,7 +33,7 @@ export function AboutSubBanner({ image, en, cn }: SubBanner) {
       >
         <Image
           src={image}
-          alt={big}
+          alt={title}
           fill
           priority
           sizes="100vw"
@@ -45,13 +44,8 @@ export function AboutSubBanner({ image, en, cn }: SubBanner) {
             variant="fade-zoom-in"
             className="flex flex-col items-center"
           >
-            {small ? (
-              <span className="text-[18px] leading-[1.5] uppercase text-white md:text-[45px] md:leading-[67.5px]">
-                {small}
-              </span>
-            ) : null}
             <span className="text-[20px] leading-[1.5] text-white md:text-[54px] md:leading-[81px]">
-              {big}
+              {title}
             </span>
           </Reveal>
         </div>
