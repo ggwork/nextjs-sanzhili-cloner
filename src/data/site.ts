@@ -42,7 +42,7 @@ export const NAV_ITEMS: NavItem[] = [
     href: "/products",
     children: [{ label: "nav.rawResin", href: "/products" }],
   },
-  { label: "nav.cases", href: "/cases" },
+  // { label: "nav.cases", href: "/cases" },
   { label: "nav.guestbook", href: "/message" },
   {
     label: "nav.news",
