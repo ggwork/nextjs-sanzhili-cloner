@@ -40,7 +40,7 @@ export const NAV_ITEMS: NavItem[] = [
   {
     label: "nav.products",
     href: "/products",
-    children: [{ label: "nav.rawResin", href: "/products" }],
+    // children: [{ label: "nav.rawResin", href: "/products" }],
   },
   // { label: "nav.cases", href: "/cases" },
   { label: "nav.guestbook", href: "/message" },
