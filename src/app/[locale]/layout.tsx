@@ -47,6 +47,11 @@ export async function generateMetadata({
         "x-default": "/en",
       },
     },
+    verification: {
+      other: {
+        "baidu-site-verification": "codeva-W3cIRqz1e3",
+      },
+    },
   };
 }
 
