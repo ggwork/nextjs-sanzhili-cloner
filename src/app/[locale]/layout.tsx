@@ -44,7 +44,7 @@ export async function generateMetadata({
       languages: {
         "zh-CN": "/zh",
         en: "/en",
-        "x-default": "/zh",
+        "x-default": "/en",
       },
     },
   };

@@ -4,7 +4,7 @@ import { routing } from "./i18n/routing";
 /**
  * Locale routing middleware.
  * - Strips/negotiates the locale prefix for every request.
- * - `/` (no prefix) redirects to the default locale `/zh`.
+ * - `/` (no prefix) redirects to the default locale `/en`.
  * - `/en/...` and `/zh/...` are routed to the localized app.
  */
 export default createMiddleware(routing);

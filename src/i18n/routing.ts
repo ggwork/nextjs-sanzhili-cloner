@@ -2,15 +2,15 @@ import { defineRouting } from "next-intl/routing";
 
 /**
  * Internationalization routing config.
- * - `zh` is the default locale (中文)
- * - `en` is the alternate locale (English)
+ * - `en` is the default locale (English)
+ * - `zh` is the alternate locale (中文)
  * - `localePrefix: "always"` keeps an explicit language prefix on every URL
- *   (e.g. `/zh`, `/en`), so both variants are fully addressable and SEO
+ *   (e.g. `/en`, `/zh`), so both variants are fully addressable and SEO
  *   hreflang links stay unambiguous.
  */
 export const routing = defineRouting({
-  locales: ["zh", "en"],
-  defaultLocale: "zh",
+  locales: ["en", "zh"],
+  defaultLocale: "en",
   localePrefix: "always",
 });
 
