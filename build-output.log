@@ -1,0 +1,6 @@
+
+> ai-website-clone-template@0.3.1 build
+> next build --webpack
+
+'next' is not recognized as an internal or external command,
+operable program or batch file.
